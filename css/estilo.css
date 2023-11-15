@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color:black;
+}
+
+
+.nav {
+    position: fixed;
+    top: 0;
+    background-color: white;
+    width: 100%;
+    height: 80px;
+    padding: 0 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px black solid;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+
+.nav__links{
+    display: flex;
+
+}
+
+.nav__link {
+    text-decoration: none;
+    color: black;
+    margin: 0 4px;
+    padding: 8px;
+}
+
+
+.nav__link:hover {
+    color: white;
+    background-color: black;
+}
+
+
+.main { 
+    height: calc(100vh - 78px);
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.5fr;
+    grid-template-rows: 1.25fr 1fr;
+    gap: 2px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "Arte Donar Contacto"
+      "Sobre-mi Donar Contacto";
+      padding: 0 2px 2px 2px;
+      overflow:hidden;
+  }
+
+  .main__section {
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+ 
+
+  .main__link {
+    color: black;
+    text-decoration: none;
+    font-size: 2rem;
+    display: none;
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 600;
+  }
+  
+  .donar { 
+    grid-area: Donar;
+    background-image: url(../images/home/home__pajaro-arma.png);
+}
+
+.donar:hover {
+    background-image: none;
+    background-color: #966855;
+}
+
+.donar:hover .main__link {
+    display: flex;
+}
+  
+  .contacto { 
+    grid-area: Contacto;
+    background-image: url(../images/home/home__camaleon-surf.png) }
+
+    .contacto:hover {
+        background-image: none;
+        background-color: #F76D1F;
+    }
+    
+    .contacto:hover .main__link {
+        display: flex;
+    }
+  
+  .arte { 
+    grid-area: Arte;
+    background-image: url(../images/home/home__crustaceo-casco.png) }
+
+    .arte:hover {
+        background-image: none;
+        background-color: #C072FE;
+    }
+    
+    .arte:hover .main__link {
+        display: flex;
+    }
+  
+  .sobreMi { 
+    grid-area: Sobre-mi;
+    background-image: url(../images/home/home__tiburon-pirata.png);
+ }
+
+ .sobreMi:hover {
+    background-image: none;
+    background-color:#3FAE6C;
+}
+
+.sobreMi:hover .main__link {
+    display: flex;
+}
+  
+
+ .footer {     
+    background-color: black;
+    color: white;     
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "links legal";
+      padding: 32px;
+      font-family: "IBM Plex Sans", sans-serif;
+  }
+  
+.footer__links {
+grid-area: links;
+display: flex;
+justify-content: center;
+align-items: flex-start;
+}
+
+.footer__linkgroup {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+}
+
+.footer__grouptitle {
+    font-weight: 800;
+}
+
+.footer__link {
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.footer__legal {
+    color: rgb(148, 140, 140);
+    grid-area: legal;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-self: center;
+    font-size: .8rem;
+}
+
+
+.footer__grouptitle, .footer__link
+{
+    padding: 4px;
+}
