@@ -197,23 +197,38 @@ align-items: flex-start;
     margin-top: 80px;
     display: flex;
     padding:120px 0;
+    border: 2px solid black;
+    border-top: none;
 }
 
 .sobreMiMain__contenedor {
     display: flex;
     justify-content: center;
     margin: 0 32px;
+    
 
 }
 
 .foto{
     padding: 0;
+
+
+}
+
+.foto__contenedor {
+    background-color:#C072FE;
+    width: 100%;
+    height: 240px;
+    margin-top: -238px;
+    border:2px solid black;
+
 }
 
 .foto img {
-    width: 100%;
-    border: 2px solid black;
+    width: calc(100% - 2px);
+
 }
+
 h1 { 
     font-family: 'Fira Sans', sans-serif;
     font-size: 5.6rem;
@@ -223,9 +238,8 @@ h1 {
 
 .subheading {
     padding: 24px 0;
-    font-size: 2rem;
-    font-weight: 600;
-    color: #a3a3a3;
+    font-size: 1.2rem;
+    font-weight: 700;
 }
 
 .parrafo {
@@ -247,4 +261,23 @@ h1 {
 .rrss a {
     color: black;
     line-height: 1rem;
+}
+
+
+
+.section__redes {
+border: 2px solid  black;
+border-top: none;
+background-color: #bf70ff;
+padding: 120px 0;
+width: 100%;
+display: flex;
+justify-content: center;
+margin: 0 auto;
+
+}
+
+
+.h3 {
+    margin-bottom: 64px;
 }
