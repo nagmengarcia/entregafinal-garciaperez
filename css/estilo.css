@@ -5,9 +5,12 @@
 }
 
 body {
-    background-color:black;
+    background-color:white;
 }
 
+.coloraparte {
+    background-color: black;
+}
 
 .nav {
     position: fixed;
@@ -186,4 +189,17 @@ align-items: flex-start;
 .footer__grouptitle, .footer__link
 {
     padding: 4px;
+}
+
+
+.sobreMiMain {
+    margin-top: 80px;
+    display: flex;
+    padding:120px 0;
+}
+
+h1 { 
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 5rem;
+    letter-spacing: -.3rem;
 }
