@@ -6,6 +6,7 @@
 
 body {
     background-color:white;
+    font: 'Fira Sans', sans-serif; 
 }
 
 .coloraparte {
@@ -201,23 +202,49 @@ align-items: flex-start;
 .sobreMiMain__contenedor {
     display: flex;
     justify-content: center;
+    margin: 0 32px;
 
+}
+
+.foto{
+    padding: 0;
 }
 
 .foto img {
     width: 100%;
+    border: 2px solid black;
 }
 h1 { 
     font-family: 'Fira Sans', sans-serif;
-    font-size: 5rem;
-    letter-spacing: -.3rem;
+    font-size: 5.6rem;
+    font-weight: 800;
+    line-height: 5.8rem;
 }
 
-h2 {
-
+.subheading {
+    padding: 24px 0;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #a3a3a3;
 }
 
 .parrafo {
     font-size: 1rem;
     line-height: 1.6rem;
+    margin-bottom: 32px;
+}
+
+.rrss {
+    display: flex;
+    align-items: center;
+
+}
+
+.rrss svg {
+    margin-right: 8px;
+}
+
+.rrss a {
+    color: black;
+    line-height: 1rem;
 }
