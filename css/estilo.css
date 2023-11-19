@@ -23,7 +23,7 @@ body {
     justify-content: space-between;
     align-items: center;
     border: 2px black solid;
-    font-family: "IBM Plex Sans", sans-serif;
+    font-family:  'Fira Sans', sans-serif;
     font-size: 1rem;
     font-weight: 800;
 }
@@ -79,7 +79,7 @@ body {
     text-decoration: none;
     font-size: 2rem;
     display: none;
-    font-family: 'Chakra Petch', sans-serif;
+    font-family:  'Fira Sans', sans-serif;
     font-weight: 600;
   }
   
@@ -149,7 +149,7 @@ body {
     grid-template-areas:
       "links legal";
       padding: 32px;
-      font-family: "IBM Plex Sans", sans-serif;
+      font-family:  'Fira Sans', sans-serif;
   }
   
 .footer__links {
@@ -198,8 +198,26 @@ align-items: flex-start;
     padding:120px 0;
 }
 
+.sobreMiMain__contenedor {
+    display: flex;
+    justify-content: center;
+
+}
+
+.foto img {
+    width: 100%;
+}
 h1 { 
-    font-family: 'Chakra Petch', sans-serif;
+    font-family: 'Fira Sans', sans-serif;
     font-size: 5rem;
     letter-spacing: -.3rem;
+}
+
+h2 {
+
+}
+
+.parrafo {
+    font-size: 1rem;
+    line-height: 1.6rem;
 }
