@@ -358,6 +358,67 @@ margin: 0 auto;
     padding: 8px 16px;
     display: flex;
     margin-top: 48px;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
 }
 
 
+.subheading-top {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.donar-main {
+    margin: 120px 0;
+}
+
+.copytextbox {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 0 auto;
+}
+
+.textandicon {
+    padding: 16px;
+    background-color:rgb(219, 219, 219);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+    margin: 24px 0 0 0;
+
+}
+
+.alias {
+    color: rgb(102, 102, 102);
+    margin: 0;
+
+}
+
+.copyicon path {
+    stroke: rgb(102, 102, 102);
+}
+
+
+.button-group {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 32px;
+    align-items: center;
+}
+
+.button-seco {
+    display: flex;
+    border-radius: 0;
+    padding: 8px 16px;
+    justify-content: center;
+    align-content: center;
+}
+
+.pera {
+    margin-top: 32px;
+}
