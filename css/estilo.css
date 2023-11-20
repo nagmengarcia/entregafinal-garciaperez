@@ -422,3 +422,10 @@ margin: 0 auto;
 .pera {
     margin-top: 32px;
 }
+
+#ancla {
+    position:absolute;
+    top:0;
+    visibility: hidden;
+
+}
