@@ -495,22 +495,25 @@ margin: 0 auto;
     width: 100%;
 }
 
-.textfield__main {
+.textarea__main {
     display: flex;
     justify-content: center;
-
-
+}
+.textarea__container label {
+    display: none;
+}
+.textarea__container {
 }
 
-.textfield {
+
+.textarea {
     width: 100%;
     padding: 8px;
     border: 2px solid black;
-    width: 100%;
     min-height: 400px;
     display: flex;
+    justify-content: flex-start;
+    align-content: flex-start;
 }
 
-.textfield__main label {
-    display: none;
-}
+
