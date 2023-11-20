@@ -427,5 +427,58 @@ margin: 0 auto;
     position:absolute;
     top:0;
     visibility: hidden;
+}
 
+.form {
+    margin: 0 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+}
+
+.doubleInput {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+}
+
+.doubleInput__box {
+
+}
+
+.doubleInput__box label {
+    display: none;
+}
+
+
+.doubleInput__item {
+    padding: 8px;
+    border: 2px solid black;
+    width: 100%;
+}
+
+.textfield__main {
+    display: flex;
+    justify-content: center;
+
+
+}
+
+.textfield__container {
+    
+}
+
+.textfield {
+    width: 100%;
+    padding: 8px;
+    border: 2px solid black;
+    width: 100%;
+    min-height: 400px;
+    display: flex;
+}
+
+.textfield__main label {
+    display: none;
 }
