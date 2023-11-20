@@ -370,7 +370,10 @@ margin: 0 auto;
 }
 
 .donar-main, .contacto-main {
-    margin: 120px 0;
+    margin: 80px 0 0 0;
+    padding: 120px 0 180px 0;
+    border: 2px solid black;
+    border-top: none;
 }
 
 .copytextbox {
@@ -430,10 +433,11 @@ margin: 0 auto;
 }
 
 .form {
-    margin: 0 32px;
+    margin: 48px 32px 0 32px;
     display: flex;
     flex-direction: column;
     gap: 24px;
+
     
 
 }
@@ -454,15 +458,16 @@ margin: 0 auto;
 }
 
 .checkbox_container div{
-    background-color: #3FAE6C;
+    padding: 0 16px 0 16px;
     
 }
 
 .checkbox_container label{
-    background-color: #3FAE6C;
     margin-left: 8px;
-    
+    color: #a2a2a2;
 }
+
+
 
 
 .form-button-container {
