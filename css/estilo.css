@@ -49,6 +49,32 @@ body {
 }
 
 
+
+
+
+
+
+.arte-selected {
+    border-bottom: 4px solid #C072FE ;
+    
+}
+
+.home-selected {
+    border-bottom: 4px solid cornflowerblue;
+}
+
+.sobre-mi-selected{
+    border-bottom: 4px solid #3FAE6C;
+}
+
+.donar-selected {
+    border-bottom: 4px solid #966855;
+}
+
+.contacto-selected {
+    border-bottom: 4px solid #F76D1F;
+}
+
 .main { 
     height: calc(100vh - 78px);
     margin-top: 80px;
@@ -216,7 +242,7 @@ align-items: flex-start;
 }
 
 .foto__contenedor {
-    background-color:#C072FE;
+    background-color:#3FAE6C;
     width: 100%;
     height: 240px;
     margin-top: -238px;
@@ -268,7 +294,7 @@ h1 {
 .section__redes {
 border: 2px solid  black;
 border-top: none;
-background-color: #bf70ff;
+background-color:#3FAE6C;
 padding: 120px 0;
 width: 100%;
 display: flex;
@@ -284,9 +310,9 @@ margin: 0 auto;
 
 
 .arte-main {
-    margin: 0;
-    margin-top: 80px;
-    padding: 120px 0;
+    margin: 200px 0 120px 0;
+    padding:0;
+    padding-bottom: 120;
     width: 100%;
 }
 
@@ -331,7 +357,7 @@ margin: 0 auto;
     border-radius: 0;
     padding: 8px 16px;
     display: flex;
-    margin-top: 120px;
+    margin-top: 48px;
 }
 
 
