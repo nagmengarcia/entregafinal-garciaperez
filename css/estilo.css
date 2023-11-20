@@ -352,15 +352,19 @@ margin: 0 auto;
 }
 
 
-.button-primary {
-    margin: 0 auto;
+
+
+.button__primary {
+    display: flex;
     border-radius: 0;
     padding: 8px 16px;
-    display: flex;
-    margin-top: 48px;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
+    width: auto;
+
+}
+
+.button__primary-centered {
+    margin: 0 auto;
+    margin-top: 32px;
 }
 
 
@@ -417,13 +421,7 @@ margin: 0 auto;
     align-items: center;
 }
 
-.button-seco {
-    display: flex;
-    border-radius: 0;
-    padding: 8px 16px;
-    width: auto;
 
-}
 
 
 
@@ -479,6 +477,7 @@ margin: 0 auto;
 .form-button {
     width: 100%;
     border-radius: 0;
+    padding: 8px 16px;
 }
 
 .doubleInput__box {
