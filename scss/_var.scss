@@ -1,0 +1,12 @@
+$ligth-background:#F7FBFF;
+$dark-background:#202020;
+$inter: "Inter", sans-serif;
+$border-all: 2px black solid;
+$text-black: #202020;
+$text-light: #F7FBFF;
+
+@mixin flex-column-centered{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

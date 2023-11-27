@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F7FBFF;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  background-color: #F7FBFF;
+  width: 100%;
+  height: 80px;
+  padding: 0 128px;
+  border: 2px black solid;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.nav .nav__links {
+  display: flex;
+}
+.nav .nav__links .nav__link {
+  text-decoration: none;
+  color: #202020;
+  margin: 0 4px;
+  padding: 8px;
+}
+.nav .nav__links .nav__link:hover {
+  color: #F7FBFF;
+  background-color: #202020;
+}
+
+/*# sourceMappingURL=estilo.css.map */
