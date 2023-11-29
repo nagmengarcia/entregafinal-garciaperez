@@ -138,13 +138,56 @@ body {
 .footer {
   background-color: #000000;
   color: #F7FBFF;
-  padding: 32px 120px;
+  padding: 128px;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 64px;
 }
-
-.footer__legal {
+.footer .footer__section-one {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.footer .footer__section-one .footer__linkgroups {
+  justify-content: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 56px;
+}
+.footer .footer__section-one .footer__linkgroups .footer__linkgroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.footer .footer__section-one .footer__linkgroups .footer__linkgroup .footer__grouptitle {
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+.footer .footer__section-one .footer__linkgroups .footer__linkgroup .footer__link {
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: #F7FBFF;
+}
+.footer .footer__section-one .footer__legal {
+  justify-self: center;
+  align-self: center;
   color: #8a8a8a;
   font-size: 0.8rem;
+}
+.footer .footer__section-two {
+  width: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.footer .footer__section-two p {
+  font-size: 0.6rem;
+  text-decoration: none;
+  color: #F7FBFF;
+  margin-top: 8px;
 }
 
 /*# sourceMappingURL=estilo.css.map */
