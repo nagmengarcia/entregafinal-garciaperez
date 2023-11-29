@@ -8,6 +8,7 @@
 
 body {
     background-color: $ligth-background;
+    font-family: 'Inter' sans-serif;
 }
 
 
@@ -21,13 +22,13 @@ body {
     padding: 0 128px;
     border: $border-all;
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 400;
     .nav__links {
         display: flex;
         .nav__link {
             text-decoration: none;
             color: $text-black;
-            margin: 0 4px;
+            margin: 0 16px;
             padding: 8px;
         &:hover {
             color: $text-light;
@@ -37,7 +38,98 @@ body {
     }
 }
 
+.nav__link__selected {
+    border-bottom: 2px solid $dark-background;
+}
 
 
+.main-hero {
+    height: calc(100vh - 78px);
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.5fr;
+    gap: 2px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "arte donar contacto"
+    "sobre-mi donar contacto";
+    padding: 0 2px 2px 2px;
+    overflow: hidden;
+    background-color: $dark-background
+}
+
+.main__link {
+    color: $text-black;
+    text-decoration: none;
+    font-size: 2rem;
+    display: none;
+    font-family: 'Inter' sans-serif;
+}
+
+.arte {
+    @include main-hero__section;
+    grid-area: arte; 
+    background-image: url(../images/home/home__crustaceo-casco.png);
+    &:hover{
+        background-image: none;
+        background-color: $green-solid;
+    }
+    &:hover .main__link {
+        display: flex;
+    }
+}
+
+.sobre-mi {
+    @include main-hero__section;
+    grid-area: sobre-mi;
+    background-image: url(../images/home/home__tiburon-pirata.png);
+    &:hover{
+        background-image: none;
+        background-color: $purple-solid;
+    }
+    &:hover .main__link {
+        display: flex;
+    }
+}
+
+.donar {
+    @include main-hero__section;
+    grid-area: donar;
+    background-image: url(../images/home/home__pajaro-arma.png);
+    &:hover{
+        background-image: none;
+        background-color: $brown-solid;
+    }
+    &:hover .main__link {
+        display: flex;
+    }
+}
+
+.contacto {
+    @include main-hero__section;
+    grid-area: contacto;
+    background-image: url(../images/home/home__camaleon-surf.png);
+    &:hover{
+        background-image: none;
+        background-color: $yellow-solid;
+    }
+    &:hover .main__link {
+        display: flex;
+    }
+}
+
+/* End of index --- start of Foooter*/
 
 
+.footer {
+    background-color: $darker-background;
+    color: $text-light;
+    padding: 32px 120px;
+    display: flex;
+}
+
+
+.footer__legal {
+    color: $text-gray;
+    font-size: .8rem;
+}

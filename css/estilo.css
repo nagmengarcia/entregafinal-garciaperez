@@ -6,6 +6,7 @@
 
 body {
   background-color: #F7FBFF;
+  font-family: "Inter" sans-serif;
 }
 
 .nav {
@@ -20,7 +21,7 @@ body {
   padding: 0 128px;
   border: 2px black solid;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 400;
 }
 .nav .nav__links {
   display: flex;
@@ -28,12 +29,122 @@ body {
 .nav .nav__links .nav__link {
   text-decoration: none;
   color: #202020;
-  margin: 0 4px;
+  margin: 0 16px;
   padding: 8px;
 }
 .nav .nav__links .nav__link:hover {
   color: #F7FBFF;
   background-color: #202020;
+}
+
+.nav__link__selected {
+  border-bottom: 2px solid #202020;
+}
+
+.main-hero {
+  height: calc(100vh - 78px);
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.5fr;
+  gap: 2px;
+  grid-auto-flow: row;
+  grid-template-areas: "arte donar contacto" "sobre-mi donar contacto";
+  padding: 0 2px 2px 2px;
+  overflow: hidden;
+  background-color: #202020;
+}
+
+.main__link {
+  color: #202020;
+  text-decoration: none;
+  font-size: 2rem;
+  display: none;
+  font-family: "Inter" sans-serif;
+}
+
+.arte {
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  grid-area: arte;
+  background-image: url(../images/home/home__crustaceo-casco.png);
+}
+.arte:hover {
+  background-image: none;
+  background-color: #3DE984;
+}
+.arte:hover .main__link {
+  display: flex;
+}
+
+.sobre-mi {
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  grid-area: sobre-mi;
+  background-image: url(../images/home/home__tiburon-pirata.png);
+}
+.sobre-mi:hover {
+  background-image: none;
+  background-color: #C072FE;
+}
+.sobre-mi:hover .main__link {
+  display: flex;
+}
+
+.donar {
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  grid-area: donar;
+  background-image: url(../images/home/home__pajaro-arma.png);
+}
+.donar:hover {
+  background-image: none;
+  background-color: #B28C7B;
+}
+.donar:hover .main__link {
+  display: flex;
+}
+
+.contacto {
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  grid-area: contacto;
+  background-image: url(../images/home/home__camaleon-surf.png);
+}
+.contacto:hover {
+  background-image: none;
+  background-color: #F6D526;
+}
+.contacto:hover .main__link {
+  display: flex;
+}
+
+/* End of index --- start of Foooter*/
+.footer {
+  background-color: #000000;
+  color: #F7FBFF;
+  padding: 32px 120px;
+  display: flex;
+}
+
+.footer__legal {
+  color: #8a8a8a;
+  font-size: 0.8rem;
 }
 
 /*# sourceMappingURL=estilo.css.map */

@@ -1,12 +1,28 @@
 $ligth-background:#F7FBFF;
 $dark-background:#202020;
-$inter: "Inter", sans-serif;
+$darker-background:#000000;
+$inter: 'Inter' sans-serif;
 $border-all: 2px black solid;
 $text-black: #202020;
 $text-light: #F7FBFF;
+$text-gray:#8a8a8a;
+$green-solid:#3DE984;
+$purple-solid: #C072FE;
+$brown-solid:#B28C7B;
+$yellow-solid:#F6D526;
+
 
 @mixin flex-column-centered{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+@mixin main-hero__section {
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
