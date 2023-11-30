@@ -35,6 +35,9 @@ body {
             background-color: $dark-background;
         }
         }
+        .nav__link:last-child {
+            margin-right: 0;
+        }
     }
 }
 
@@ -44,7 +47,7 @@ body {
 
 
 .main-hero {
-    height: calc(100vh - 78px);
+    height: calc(80vh);
     margin-top: 80px;
     display: grid;
     grid-template-columns: 1fr 1fr 1.5fr;
@@ -118,7 +121,7 @@ body {
     }
 }
 
-/* End of index --- start of Foooter*/
+/* End of index --- start of footer*/
 
 
 .footer {
@@ -173,13 +176,8 @@ body {
             text-decoration: none;
             color: $text-light;
             margin-top: 8px;
-
-        }
-        a {
         }
     }
-    
 }
 
-
-
+/* End of footer --- start of */

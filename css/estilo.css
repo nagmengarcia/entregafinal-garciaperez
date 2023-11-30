@@ -36,13 +36,16 @@ body {
   color: #F7FBFF;
   background-color: #202020;
 }
+.nav .nav__links .nav__link:last-child {
+  margin-right: 0;
+}
 
 .nav__link__selected {
   border-bottom: 2px solid #202020;
 }
 
 .main-hero {
-  height: calc(100vh - 78px);
+  height: 80vh;
   margin-top: 80px;
   display: grid;
   grid-template-columns: 1fr 1fr 1.5fr;
@@ -134,7 +137,7 @@ body {
   display: flex;
 }
 
-/* End of index --- start of Foooter*/
+/* End of index --- start of footer*/
 .footer {
   background-color: #000000;
   color: #F7FBFF;
@@ -189,5 +192,7 @@ body {
   color: #F7FBFF;
   margin-top: 8px;
 }
+
+/* End of footer --- start of */
 
 /*# sourceMappingURL=estilo.css.map */
