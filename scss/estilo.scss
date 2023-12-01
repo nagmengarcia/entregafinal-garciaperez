@@ -265,9 +265,7 @@ max-width: 42ch;
     @extend .main;
     background-color: $green-solid;
     .sobre-mi-main__container{
-        display: flex;
-        justify-content: space-between;
-        gap: 24px;
+    
         .sobre-mi-main__text-container {
             h1 {
                 @include h1;
@@ -282,6 +280,7 @@ max-width: 42ch;
         }
         .sobre-mi-main__photo-container{
             display: block;
+            margin-top: 40px;
             .sobre-mi-main__talent-photo{
                 width: 100%;
                 height: auto;
@@ -344,12 +343,66 @@ max-width: 42ch;
         .donar-main__h1{
             @include h1;
             order: 2;
+            margin-bottom: 0;
         }
         .donar-main__subheading {
             @include subheading;
             order: 1;
+            margin-bottom: 16px;
+            line-height: 1rem;
         }
 
     }
-    
+    .donar-main__mp-link{
+        width: auto;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        margin-top: 32px;
+        .donar-main__link-content{
+            display: flex;
+            gap: 16px;
+            padding: 24px;
+            background-color: $gray-background;
+            justify-items: center;
+            align-items: center;
+            .donar-main__alias{
+                font-family: $ibm-plex-mono;
+                color: $text-dark-gray;
+                font-weight: 500;
+                font-size: 1rem;
+                letter-spacing: .1rem;
+                margin: auto;
+            }
+            .donar-main__icon{
+                stroke: $text-dark-gray;
+            }
+        }
+    }
+    .button-group{
+        margin: 0 auto;
+        margin-top: 32px;
+        display: flex;
+        width: fit-content;
+        gap: 16px;
+    } 
+    .donar-main__imgs{
+        position: relative;
+        left: -64px;
+        width: 100%;
+
+        .donar-main__img{
+            position: relative;
+            left: 0px;
+            height: 420px;
+            z-index: -1;
+        }
+
+        svg{
+            position: relative;
+            left: -400px;
+            top: -96px;
+            z-index: -2;
+        }
+    }  
 }

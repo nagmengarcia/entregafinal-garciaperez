@@ -295,11 +295,6 @@ body {
 .sobre-mi-main {
   background-color: #3DE984;
 }
-.sobre-mi-main .sobre-mi-main__container {
-  display: flex;
-  justify-content: space-between;
-  gap: 24px;
-}
 .sobre-mi-main .sobre-mi-main__container .sobre-mi-main__text-container h1 {
   font-family: "Inter", sans-serif;
   font-size: 6rem;
@@ -322,6 +317,7 @@ body {
 }
 .sobre-mi-main .sobre-mi-main__container .sobre-mi-main__photo-container {
   display: block;
+  margin-top: 40px;
 }
 .sobre-mi-main .sobre-mi-main__container .sobre-mi-main__photo-container .sobre-mi-main__talent-photo {
   width: 100%;
@@ -377,6 +373,7 @@ body {
   font-weight: 900;
   margin-bottom: 24px;
   order: 2;
+  margin-bottom: 0;
 }
 .donar-main .donar-main__title .donar-main__subheading {
   font-family: "Inter", sans-serif;
@@ -384,6 +381,58 @@ body {
   line-height: 1.5rem;
   font-weight: 700;
   order: 1;
+  margin-bottom: 16px;
+  line-height: 1rem;
+}
+.donar-main .donar-main__mp-link {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-top: 32px;
+}
+.donar-main .donar-main__mp-link .donar-main__link-content {
+  display: flex;
+  gap: 16px;
+  padding: 24px;
+  background-color: #D8DCE0;
+  justify-items: center;
+  align-items: center;
+}
+.donar-main .donar-main__mp-link .donar-main__link-content .donar-main__alias {
+  font-family: "IBM Plex Mono", monospace;
+  color: #6C6E70;
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  margin: auto;
+}
+.donar-main .donar-main__mp-link .donar-main__link-content .donar-main__icon {
+  stroke: #6C6E70;
+}
+.donar-main .button-group {
+  margin: 0 auto;
+  margin-top: 32px;
+  display: flex;
+  width: fit-content;
+  gap: 16px;
+}
+.donar-main .donar-main__imgs {
+  position: relative;
+  left: -64px;
+  width: 100%;
+}
+.donar-main .donar-main__imgs .donar-main__img {
+  position: relative;
+  left: 0px;
+  height: 420px;
+  z-index: -1;
+}
+.donar-main .donar-main__imgs svg {
+  position: relative;
+  left: -400px;
+  top: -96px;
+  z-index: -2;
 }
 
 /*# sourceMappingURL=estilo.css.map */
