@@ -10,6 +10,7 @@ $green-solid:#3DE984;
 $purple-solid: #C072FE;
 $brown-solid:#B28C7B;
 $yellow-solid:#F6D526;
+$link-hovered-purpleblue: #6977F9;
 
 
 @mixin flex-column-centered{
@@ -26,3 +27,44 @@ $yellow-solid:#F6D526;
     align-items: center;
     text-align: center;
 }
+
+@mixin h1 {
+    font-family: $inter;
+    font-size: 6rem;
+    line-height: 6rem;
+    letter-spacing: -3%;
+    font-weight: 900;
+    margin-bottom: 24px;
+}
+
+
+@mixin paragraph {
+
+}
+
+
+@mixin button-primary{
+    border: none;
+    display: flex;
+}
+
+@mixin button-primary-text{
+    font-family: $inter;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: $text-light;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    background-color: $dark-background;
+    padding: 16px 20px;
+    transition: all 400ms ease-in-out;
+    &:hover {
+        background-color: $link-hovered-purpleblue;
+    }
+}
+
+

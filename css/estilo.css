@@ -7,6 +7,8 @@
 body {
   background-color: #F7FBFF;
   font-family: "Inter" sans-serif;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 .nav {
@@ -174,6 +176,10 @@ body {
   font-size: 0.8rem;
   text-decoration: none;
   color: #F7FBFF;
+  transition: all 400ms ease-in-out;
+}
+.footer .footer__section-one .footer__linkgroups .footer__linkgroup .footer__link:hover {
+  color: #6977F9;
 }
 .footer .footer__section-one .footer__legal {
   justify-self: center;
@@ -197,15 +203,42 @@ body {
 /* End of footer --- start of arte */
 .main {
   width: 100%;
-  margin: 200px 0 120 0;
+  margin: 80px 0 0 0;
+  border: 2px solid #202020;
+  border-top: none;
+  padding: 120px 128px;
+}
+
+.arte-shape {
+  position: absolute;
+  right: -40px;
+  top: 102px;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.h1-left {
+  font-family: "Inter" sans-serif;
+  font-size: 6rem;
+  line-height: 6rem;
+  letter-spacing: -3%;
+  font-weight: 900;
+  margin-bottom: 24px;
+}
+
+.paragraph-left {
+  font-family: "Inter" sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  max-width: 46ch;
 }
 
 .masonry-grid {
-  width: calc(100% - 256px);
+  width: 100%;
   display: flex;
   gap: 16px;
   margin: 0 auto;
-  margin-top: 80px;
+  margin-top: 48px;
 }
 .masonry-grid .masonry-grid__column {
   width: 33.3333333333%;
@@ -218,6 +251,43 @@ body {
   height: 100%;
   object-fit: cover;
   border: 2px solid black;
+}
+
+.scrim {
+  background: linear-gradient(to top, #F7FBFF, rgba(247, 251, 255, 0));
+  width: 100%;
+  height: 200px;
+  position: relative;
+  z-index: 2;
+  margin-top: -180px;
+}
+
+.button-primary {
+  border: none;
+  display: flex;
+  margin: 0 auto;
+}
+.button-primary a {
+  font-family: "Inter" sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #F7FBFF;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  background-color: #202020;
+  padding: 16px 20px;
+  transition: all 400ms ease-in-out;
+}
+.button-primary a:hover {
+  background-color: #6977F9;
+}
+
+.button-margin {
+  margin-top: 48px;
 }
 
 /*# sourceMappingURL=estilo.css.map */
