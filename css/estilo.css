@@ -202,7 +202,7 @@ body {
 }
 
 /* End of footer --- start of arte */
-.main, .sobre-mi-main {
+.main, .donar-main, .sobre-mi-main {
   width: 100%;
   margin: 80px 0 0 0;
   border: 2px solid #202020;
@@ -362,6 +362,28 @@ body {
   right: 0;
   left: auto;
   top: 260px;
+}
+
+/* End of sobre mi --- start of donar */
+.donar-main .donar-main__title {
+  display: flex;
+  flex-direction: column;
+}
+.donar-main .donar-main__title .donar-main__h1 {
+  font-family: "Inter", sans-serif;
+  font-size: 6rem;
+  line-height: 6rem;
+  letter-spacing: -0.2rem;
+  font-weight: 900;
+  margin-bottom: 24px;
+  order: 2;
+}
+.donar-main .donar-main__title .donar-main__subheading {
+  font-family: "Inter", sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-weight: 700;
+  order: 1;
 }
 
 /*# sourceMappingURL=estilo.css.map */
