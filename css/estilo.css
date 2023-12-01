@@ -209,6 +209,12 @@ body {
   border-top: none;
   padding: 120px 128px;
 }
+@media screen and (max-width: 768px) {
+  .main, .donar-main, .sobre-mi-main {
+    width: 100%;
+    margin: 80px 0 0 0;
+  }
+}
 
 .arte-shape {
   position: absolute;
@@ -433,6 +439,159 @@ body {
   left: -400px;
   top: -96px;
   z-index: -2;
+}
+
+/* End of donar --- start of contacto */
+.checked {
+  display: flex;
+  width: 4px;
+  height: 4px;
+  background-color: none;
+  position: relative;
+  left: -12px;
+  z-index: -1;
+  transform: scale(1, 1);
+  transition: all 400ms ease-in-out;
+}
+
+.contacto-main {
+  width: 100%;
+  margin: 80px 0 0 0;
+  border: 2px solid #202020;
+  border-top: none;
+  padding: 120px 128px;
+}
+@media screen and (max-width: 768px) {
+  .contacto-main {
+    width: 100%;
+    margin: 80px 0 0 0;
+  }
+}
+.contacto-main .contacto-main__title {
+  display: flex;
+  flex-direction: column;
+}
+.contacto-main .contacto-main__title .contacto-main__h1 {
+  font-family: "Inter", sans-serif;
+  font-size: 6rem;
+  line-height: 6rem;
+  letter-spacing: -0.2rem;
+  font-weight: 900;
+  margin-bottom: 24px;
+  order: 2;
+  margin-bottom: 0;
+}
+.contacto-main .contacto-main__title .contacto-main__h2 {
+  font-family: "Inter", sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-weight: 700;
+  order: 1;
+  margin-bottom: 16px;
+  line-height: 1rem;
+}
+.contacto-main .form {
+  margin: 0 auto;
+  margin-top: 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.contacto-main .form .form__input-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+.contacto-main .form .form__input-row .form__cell-container {
+  width: 100%;
+}
+.contacto-main .form .form__input-row .form__cell-container label {
+  display: none;
+}
+.contacto-main .form .form__input-row .form__cell-container .form__cell, .contacto-main .form .form__input-row .form__cell-container .form__cell:focus {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: #F7FBFF;
+  border-bottom: 2px #202020 solid;
+  padding: 8px;
+  font-family: "IBM Plex Mono", monospace;
+}
+.contacto-main .form .form__input-row .form__cell-container .form__cell:focus {
+  border-color: #6977F9;
+  outline: none;
+}
+.contacto-main .form label {
+  display: none;
+}
+.contacto-main .form .form__text-area {
+  width: 100%;
+  padding: 8px;
+  border: 2px #202020 solid;
+  background-color: #F7FBFF;
+  font-family: "IBM Plex Mono", monospace;
+  color: #6C6E70;
+}
+.contacto-main .form .form__text-area:focus {
+  border-color: #6977F9;
+  outline: none;
+}
+.contacto-main .form .form__subscribe {
+  color: #202020;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2px;
+}
+.contacto-main .form .form__subscribe .form__checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 2px #202020 solid;
+  cursor: pointer;
+}
+.contacto-main .form .form__subscribe .form__checkbox:checked {
+  border-color: #6977F9;
+}
+.contacto-main .form .form__subscribe .form__checkbox:checked + .checked {
+  display: inline-block;
+  background-color: #6977F9;
+  position: relative;
+  left: -12px;
+  transform: scale(2.1, 2.1);
+}
+.contacto-main .form .form__checkbox-text {
+  display: inline;
+  font-family: "Inter", sans-serif;
+  font-size: 0.8rem;
+}
+.contacto-main .form .button-primary {
+  border: none;
+  display: flex;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #F7FBFF;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  background-color: #202020;
+  padding: 16px 20px;
+  transition: all 400ms ease-in-out;
+  width: 100%;
+}
+.contacto-main .form .button-primary:hover {
+  background-color: #6977F9;
+}
+.contacto-main .form input::placeholder, .contacto-main .form textarea::placeholder {
+  color: #d1d1d1;
 }
 
 /*# sourceMappingURL=estilo.css.map */

@@ -9,6 +9,7 @@ $border-all: 2px $dark-background solid;
 $text-black: #202020;
 $text-light: #F7FBFF;
 $text-gray:#8a8a8a;
+$text-placeholder:#d1d1d1;
 $text-dark-gray: #6C6E70;
 $green-solid:#3DE984;
 $purple-solid: #C072FE;
@@ -16,6 +17,37 @@ $brown-solid:#B28C7B;
 $yellow-solid:#F6D526;
 $link-hovered-purpleblue: #6977F9;
 
+
+
+@mixin main {
+    max-width: 100vw;
+    width: 100%;
+    margin:80px 0 0 0;
+    border: 2px solid $dark-background ;
+    border-top: none;
+    padding: 120px 128px;
+    overflow-x: hidden;
+    
+    @media screen and (max-width: 768px) {
+        max-width: 100vw;
+        width: 100%;
+        margin:80px 0 0 0;
+        border: 2px solid $dark-background ;
+        border-top: none;
+        padding: 72px 40px;
+        overflow-x: hidden;
+    }
+
+    @media screen and (max-width: 576 ) {
+        max-width: 100vw;
+        width: 100%;
+        margin:80px 0 0 0;
+        border: 2px solid $dark-background ;
+        border-top: none;
+        padding: 56px 32px ;
+        overflow-x: hidden;
+    }
+}
 
 @mixin flex-column-centered{
     display: flex;
@@ -78,6 +110,11 @@ $link-hovered-purpleblue: #6977F9;
     &:hover {
         background-color: $link-hovered-purpleblue;
     }
+
 }
+
+
+
+
 
 

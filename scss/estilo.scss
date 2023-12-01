@@ -191,11 +191,7 @@ body {
 /* End of footer --- start of arte */
 
 .main {
-    width: 100%;
-    margin:80px 0 0 0;
-    border: 2px solid $dark-background ;
-    border-top: none;
-    padding: 120px 128px;
+    @include main;
 
 }
 
@@ -406,3 +402,142 @@ max-width: 42ch;
         }
     }  
 }
+
+
+/* End of donar --- start of contacto */
+
+.checked {
+    display: flex;
+    width: 4px;
+    height: 4px;
+    background-color: none;
+    position: relative;
+    left: -12px;
+    z-index: -1;
+    transform: scale(1, 1);
+    transition: all 400ms ease-in-out;
+    
+}
+.contacto-main {
+    @include main;
+    .contacto-main__title{
+        display: flex;
+        flex-direction: column;
+        .contacto-main__h1{
+            @include h1;
+            order: 2;
+            margin-bottom: 0;
+        }
+        .contacto-main__h2{
+            @include subheading;
+            order: 1;
+            margin-bottom: 16px;
+            line-height: 1rem;
+        }
+    }
+
+    .form {
+        margin: 0 auto;
+        margin-top: 64px ;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        .form__input-row{
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+            .form__cell-container{
+                width: 100%;
+                
+                label{
+                    display: none;
+                }
+
+                .form__cell{
+                    display: flex;
+                    width: 100%;
+                    margin: 0;
+                    padding: 0;
+                    border: none;
+                    background-color: $ligth-background;
+                    border-bottom: $border-all;
+                    padding: 8px;
+                    font-family: $ibm-plex-mono;
+                    &:focus{
+                        @extend .form__cell;
+                        border-color: $link-hovered-purpleblue;
+                        outline: none;
+                    }
+                }
+
+                
+               
+            }
+        }
+        
+        label {
+            display: none;
+        }
+        
+        .form__text-area {
+            width: 100%;
+            padding: 8px;
+            border: $border-all;
+            background-color: $ligth-background;
+            font-family: $ibm-plex-mono;
+            color: $text-dark-gray;
+            &:focus {
+                border-color: $link-hovered-purpleblue;
+                outline: none;
+            }
+            
+        }
+
+        .form__subscribe{
+            color: $text-black;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 2px;
+            .form__checkbox {
+                appearance: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                width: 16px;
+                height: 16px;
+                border: $border-all;
+                cursor: pointer;
+                &:checked{
+                    border-color: $link-hovered-purpleblue;
+                }
+                &:checked + .checked {
+                    display: inline-block;
+                    background-color: $link-hovered-purpleblue;
+                    position: relative;
+                    left: -12px;
+                    transform: scale(2.1, 2.1);
+                }
+            } 
+        }
+        
+        .form__checkbox-text{
+                display: inline;
+                font-family: $inter;
+                font-size: .8rem;
+        }
+
+        
+        .button-primary{
+            @include button-primary;
+            @include button-primary-text;
+            width: 100%;
+        }
+    
+        input::placeholder, textarea::placeholder{
+            color: $text-placeholder;
+        }    
+    }
+}
+
+
