@@ -1,8 +1,8 @@
 $ligth-background:#F7FBFF;
 $dark-background:#202020;
 $darker-background:#000000;
-$inter: 'Inter' sans-serif;
-$border-all: 2px black solid;
+$inter: 'Inter', sans-serif;
+$border-all: 2px $dark-background solid;
 $text-black: #202020;
 $text-light: #F7FBFF;
 $text-gray:#8a8a8a;
@@ -32,14 +32,23 @@ $link-hovered-purpleblue: #6977F9;
     font-family: $inter;
     font-size: 6rem;
     line-height: 6rem;
-    letter-spacing: -3%;
+    letter-spacing: -.2rem;
     font-weight: 900;
     margin-bottom: 24px;
 }
 
 
-@mixin paragraph {
+@mixin subheading {
+    font-family: $inter;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    font-weight: 700;
+}
 
+@mixin paragraph {
+    font-family: $inter;
+    font-size: 1rem;
+    line-height: 1.5rem;
 }
 
 

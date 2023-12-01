@@ -21,9 +21,10 @@ body {
   width: 100%;
   height: 80px;
   padding: 0 128px;
-  border: 2px black solid;
+  border: 2px #202020 solid;
   font-size: 1rem;
   font-weight: 400;
+  z-index: 3;
 }
 .nav .nav__links {
   display: flex;
@@ -201,7 +202,7 @@ body {
 }
 
 /* End of footer --- start of arte */
-.main {
+.main, .sobre-mi-main {
   width: 100%;
   margin: 80px 0 0 0;
   border: 2px solid #202020;
@@ -218,19 +219,19 @@ body {
 }
 
 .h1-left {
-  font-family: "Inter" sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 6rem;
   line-height: 6rem;
-  letter-spacing: -3%;
+  letter-spacing: -0.2rem;
   font-weight: 900;
   margin-bottom: 24px;
 }
 
 .paragraph-left {
-  font-family: "Inter" sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 1rem;
   line-height: 1.5rem;
-  max-width: 46ch;
+  max-width: 42ch;
 }
 
 .masonry-grid {
@@ -268,7 +269,7 @@ body {
   margin: 0 auto;
 }
 .button-primary a {
-  font-family: "Inter" sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.5rem;
@@ -288,6 +289,79 @@ body {
 
 .button-margin {
   margin-top: 48px;
+}
+
+/* End of arte --- start of sobre mi */
+.sobre-mi-main {
+  background-color: #3DE984;
+}
+.sobre-mi-main .sobre-mi-main__container {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+.sobre-mi-main .sobre-mi-main__container .sobre-mi-main__text-container h1 {
+  font-family: "Inter", sans-serif;
+  font-size: 6rem;
+  line-height: 6rem;
+  letter-spacing: -0.2rem;
+  font-weight: 900;
+  margin-bottom: 24px;
+}
+.sobre-mi-main .sobre-mi-main__container .sobre-mi-main__text-container .subheading {
+  font-family: "Inter", sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-weight: 700;
+}
+.sobre-mi-main .sobre-mi-main__container .sobre-mi-main__text-container .parrafo {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  max-width: 42ch;
+}
+.sobre-mi-main .sobre-mi-main__container .sobre-mi-main__photo-container {
+  display: block;
+}
+.sobre-mi-main .sobre-mi-main__container .sobre-mi-main__photo-container .sobre-mi-main__talent-photo {
+  width: 100%;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  border: 2px #202020 solid;
+  position: relative;
+  z-index: 2;
+}
+
+.sobre-mi-main__shape-one, .sobre-mi-main__shape-two {
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  left: -56px;
+  overflow: hidden;
+}
+
+.sobre-mi-main__shape-two {
+  top: 260px;
+  right: -42px;
+  left: auto;
+}
+
+.left-line, .right-line {
+  display: flex;
+  border-left: 2px #202020 solid;
+  width: 1px;
+  height: 500px;
+  position: absolute;
+  left: 0;
+  top: 80px;
+  z-index: 1;
+}
+
+.right-line {
+  right: 0;
+  left: auto;
+  top: 260px;
 }
 
 /*# sourceMappingURL=estilo.css.map */

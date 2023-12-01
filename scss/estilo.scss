@@ -25,6 +25,7 @@ body {
     border: $border-all;
     font-size: 1rem;
     font-weight: 400;
+    z-index: 3;
     .nav__links {
         display: flex;
         .nav__link {
@@ -211,10 +212,8 @@ body {
 }
 
 .paragraph-left{
-font-family: $inter;
-font-size: 1rem;
-line-height: 1.5rem;
-max-width: 46ch;
+@include paragraph;
+max-width: 42ch;
 }
 
 .masonry-grid {
@@ -259,3 +258,76 @@ max-width: 46ch;
     margin-top: 48px;
 }
 
+/* End of arte --- start of sobre mi */
+
+
+.sobre-mi-main {
+    @extend .main;
+    background-color: $green-solid;
+    .sobre-mi-main__container{
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+        .sobre-mi-main__text-container {
+            h1 {
+                @include h1;
+            }
+            .subheading {
+                @include subheading;
+            }
+            .parrafo {
+                @include paragraph;
+                max-width: 42ch;
+            }
+        }
+        .sobre-mi-main__photo-container{
+            display: block;
+            .sobre-mi-main__talent-photo{
+                width: 100%;
+                height: auto;
+                padding: 0;
+                margin: 0;
+                border: $border-all;
+                position: relative;
+                z-index: 2;
+            }
+        }
+        
+    }
+}
+
+.sobre-mi-main__shape-one {
+    position: absolute;
+    z-index: 1;
+    top: -10px;
+    left: -56px;
+    overflow: hidden;
+
+}
+
+.sobre-mi-main__shape-two {
+    @extend .sobre-mi-main__shape-one;
+    top:260px;
+    right: -42px;
+    left: auto;
+}
+
+
+.left-line {
+    display: flex;
+    border-left: $border-all;
+    width: 1px;
+    height: 500px;
+    position: absolute;
+    left: 0;
+    top: 80px;
+    z-index: 1;
+}
+
+.right-line {
+    @extend .left-line;
+    right: 0;
+    left: auto;
+    top: 260px;
+
+}
