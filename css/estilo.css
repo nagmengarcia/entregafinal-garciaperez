@@ -347,7 +347,7 @@ body {
 }
 
 /* End of footer --- start of arte */
-.main, .donar-main {
+.main {
   max-width: 100vw;
   width: 100%;
   margin: 80px 0 0 0;
@@ -357,7 +357,7 @@ body {
   overflow-x: hidden;
 }
 @media screen and (max-width: 800px) {
-  .main, .donar-main {
+  .main {
     max-width: 100vw;
     width: 100%;
     margin: 80px 0 0 0;
@@ -368,7 +368,7 @@ body {
   }
 }
 @media screen and (max-width: 576px) {
-  .main, .donar-main {
+  .main {
     max-width: 100vw;
     width: 100%;
     margin: 64px 0 0 0;
@@ -379,7 +379,7 @@ body {
   }
 }
 @media screen and (min-width: 1600px) {
-  .main, .donar-main {
+  .main {
     max-width: 100vw;
     width: 100%;
     margin: 80px 0 0 0;
@@ -735,6 +735,47 @@ body {
 }
 
 /* End of sobre mi --- start of donar */
+.donar-main {
+  max-width: 100vw;
+  width: 100%;
+  margin: 80px 0 0 0;
+  border: 2px solid #202020;
+  border-top: none;
+  padding: 120px 128px;
+  overflow-x: hidden;
+}
+@media screen and (max-width: 800px) {
+  .donar-main {
+    max-width: 100vw;
+    width: 100%;
+    margin: 80px 0 0 0;
+    border: 2px solid #202020;
+    border-top: none;
+    padding: 72px 40px;
+    overflow-x: hidden;
+  }
+}
+@media screen and (max-width: 576px) {
+  .donar-main {
+    max-width: 100vw;
+    width: 100%;
+    margin: 64px 0 0 0;
+    border: 2px solid #202020;
+    border-top: none;
+    padding: 56px 32px;
+    overflow-x: hidden;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .donar-main {
+    max-width: 100vw;
+    width: 100%;
+    margin: 80px 0 0 0;
+    border: 2px solid #202020;
+    border-top: none;
+    padding: 120px 192px;
+  }
+}
 .donar-main .donar-main__title {
   display: flex;
   flex-direction: column;
@@ -802,27 +843,99 @@ body {
   margin: 0 auto;
   margin-top: 32px;
   display: flex;
+  flex-wrap: wrap;
   width: fit-content;
   gap: 16px;
 }
 .donar-main .donar-main__imgs {
+  display: flex;
   position: relative;
   left: -64px;
+  top: 32px;
   width: 100%;
+  margin-bottom: 32px;
+  justify-content: flex-start;
+}
+@media screen and (max-width: 800px) {
+  .donar-main .donar-main__imgs {
+    left: auto;
+    right: auto;
+    justify-content: center;
+    top: 64px;
+    margin-bottom: 64px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .donar-main .donar-main__imgs {
+    margin: 0 auto;
+    left: auto;
+    right: auto;
+    justify-content: center;
+    top: 64px;
+    margin-bottom: 64px;
+    width: 80%;
+  }
 }
 .donar-main .donar-main__imgs .donar-main__img {
-  position: relative;
-  left: 0px;
-  height: 420px;
+  width: 480px;
   z-index: -1;
 }
+@media screen and (max-width: 800px) {
+  .donar-main .donar-main__imgs .donar-main__img {
+    width: 400px;
+    margin: 0 auto;
+    order: 2;
+  }
+}
+@media screen and (max-width: 576px) {
+  .donar-main .donar-main__imgs .donar-main__img {
+    width: 320px;
+    margin: 0 auto;
+    order: 2;
+    max-width: 100%;
+  }
+}
 .donar-main .donar-main__imgs svg {
-  position: relative;
-  left: -400px;
-  top: -96px;
+  position: absolute;
   z-index: -2;
+  width: 320px;
+  left: 47.0588235294px;
+  top: -16px;
+  animation: rotate 12s linear infinite;
+}
+@media screen and (max-width: 800px) {
+  .donar-main .donar-main__imgs svg {
+    width: 220px;
+    left: auto;
+    right: auto;
+    position: absolute;
+    top: -60px;
+  }
+  .donar-main .donar-main__imgs svg path {
+    stroke-width: 2px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .donar-main .donar-main__imgs svg {
+    height: 60%;
+    left: auto;
+    right: auto;
+    position: absolute;
+    top: -20px;
+  }
+  .donar-main .donar-main__imgs svg path {
+    stroke-width: 8px;
+  }
 }
 
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 /* End of donar --- start of contacto */
 .checked {
   display: flex;
