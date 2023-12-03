@@ -28,7 +28,7 @@ $link-hovered-purpleblue: #6977F9;
     padding: 120px 128px;
     overflow-x: hidden;
     
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 800px) {
         max-width: 100vw;
         width: 100%;
         margin:80px 0 0 0;
@@ -38,7 +38,7 @@ $link-hovered-purpleblue: #6977F9;
         overflow-x: hidden;
     }
 
-    @media screen and (max-width: 576 ) {
+    @media screen and (max-width: 576px ) {
         max-width: 100vw;
         width: 100%;
         margin:80px 0 0 0;
@@ -47,7 +47,68 @@ $link-hovered-purpleblue: #6977F9;
         padding: 56px 32px ;
         overflow-x: hidden;
     }
+
+    @media screen and (min-width: 1600px) {
+        max-width: 100vw;
+        width: 100%;
+        margin:80px 0 0 0;
+        border: 2px solid $dark-background ;
+        border-top: none;
+        padding: 120px 192px ;
+
+    }
 }
+
+@mixin nav-bar {
+    position: fixed;
+    top: 0;
+    background-color: $ligth-background;
+    border: $border-all;
+    width: 100%;
+    height: 80px;
+    padding: 0 128px;
+    font-size: 1rem;
+    font-weight: 400;
+    z-index: 3;
+    @media screen and (max-width:800px) {
+        position: fixed;
+        top: 0;
+        background-color: $ligth-background;
+        border: $border-all;
+        width: 100%;
+        height: 80px;
+        padding: 0 40px;
+        font-size: 1rem;
+        font-weight: 400;
+        z-index: 3;  
+    }
+}
+
+@mixin nav-menu-mobile {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 8px;
+        font-size: 1rem;
+
+    @media screen and (max-width: 800px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px;
+        font-size: 1rem;  
+    }
+
+}
+
+@mixin nav-items-desktop {
+    display: flex;
+    @media screen and (max-width: 800px) {
+        display: none;
+    }
+
+}
+
 
 @mixin flex-column-centered{
     display: flex;
@@ -66,11 +127,21 @@ $link-hovered-purpleblue: #6977F9;
 
 @mixin h1 {
     font-family: $inter;
-    font-size: 6rem;
-    line-height: 6rem;
+    font-size: 5rem;
+    line-height: 5rem;
     letter-spacing: -.2rem;
     font-weight: 900;
     margin-bottom: 24px;
+    @media screen and (max-width: 768px) {
+        font-size: 4rem;
+        line-height: 4rem; 
+    }
+    @media screen and (max-width: 576px) {
+        font-size: 3.5rem;
+        line-height: 3.5rem;
+        margin: 0 auto;
+        text-align: center; 
+    }
 }
 
 
@@ -117,4 +188,16 @@ $link-hovered-purpleblue: #6977F9;
 
 
 
-
+@mixin footer {
+    background-color: $darker-background;
+    color: $text-light;
+    padding: 128px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 64px;
+    @media screen and (max-width:800px) {
+    padding: 64px 40px ;
+    }
+}
