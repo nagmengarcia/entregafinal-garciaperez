@@ -73,13 +73,13 @@ body {
           "contacto contacto contacto contacto"  
     }
     @media screen and (max-width: 576px) {
-        grid-template-columns: .5fr .5fr .5fr 1fr; 
+        grid-template-columns: repeat(6, .5fr); 
         grid-template-rows: 1fr 1.25fr 1fr; 
         gap: 2px; 
         grid-template-areas: 
-          "arte arte arte sobre-mi"
-          "camaleon donar donar donar"
-          "contacto contacto contacto contacto"  
+          "arte arte arte sobre-mi sobre-mi sobre-mi"
+          "camaleon camaleon donar donar donar donar"
+          "contacto contacto contacto contacto contacto contacto"  
     }
 
 }
@@ -207,14 +207,21 @@ body {
                 }
             }
         }
+    }
         .footer__legal {
             justify-self: center;
             align-self: center;
             color: $text-gray;
             font-size: .8rem;
+            text-align: center;
+            @media screen and (max-width: 576px) {
+                max-width: 34ch;
+                text-align: center;
+            }
         }
-    }
-    .footer__section-two{
+}
+   
+.footer__section-two{
         width: 100%;
         display: flex;
         align-content: center;
@@ -226,30 +233,54 @@ body {
             margin-top: 8px;
         }
     }
-}
+
 
 /* End of footer --- start of arte */
 
 .main {
     @include main;
-
 }
 
 .arte-shape{
     position: absolute;
     right: -40px;
     top: 102px;
-    z-index:-1 ;
-    overflow: hidden;
+    z-index:-1;
+    @media screen and (max-width:800px) {
+        transform: scale(0.7);
+        right: -100px;
+        top: 72px;
+        path {
+            stroke-width: calc(2px / 0.7);
+        }
+        
+    }
+
+    @media screen and (max-width:576px) {
+        transform: scale(0.6);
+        right: -100px;
+        top: 42px;
+        path {
+            stroke-width: calc(2px / 0.6);
+        }
+        
+    }
 }
 
 .h1-left{
     @include h1;
+    @media screen and (max-width: 576px) {
+        margin: 0;
+        text-align: left;   
+    }
 }
 
 .paragraph-left{
-@include paragraph;
-max-width: 42ch;
+    @include paragraph;
+    max-width: 42ch;
+    @media screen and (max-width: 576px) {
+        max-width: 28ch;
+    }
 }
 
 .masonry-grid {
@@ -294,80 +325,158 @@ max-width: 42ch;
     margin-top: 48px;
 }
 
-/* End of arte --- start of sobre mi */
+#ancla {
+    position:absolute;
+    top:0;
+    visibility: hidden;
+}
 
+/* End of arte --- start of sobre mi */
+.body-sobre-mi {
+    background-color: $green-solid;
+}
 
 .sobre-mi-main {
-    @extend .main;
-    background-color: $green-solid;
-    .sobre-mi-main__container{
-        justify-content: space-between;
-        width: 100%;
-    
-        .sobre-mi-main__text-container {
-            h1 {
-                @include h1;
-            }
-            .subheading {
-                @include subheading;
-            }
-            .parrafo {
-                @include paragraph;
-                max-width: 42ch;
-            }
-        }
-        .sobre-mi-main__photo-container{
-            display: block;
-            margin-top: 40px;
-            .sobre-mi-main__talent-photo{
-                width: 100%;
-                height: auto;
-                padding: 0;
-                margin: 0;
-                border: $border-all;
-                position: relative;
-                z-index: 2;
-            }
-        }
+    @include main;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: nowrap;
+    @media screen and (max-width:900px){
+        flex-direction: column;
         
     }
+    h1 {
+        @include h1;
+        @media screen and (max-width:900px){
+            text-align: center;
+        }
+    }
+    .subheading {
+        @include subheading;
+        margin-bottom: 32px;
+        @media screen and (max-width:900px){
+            text-align: center;
+        }
+    }
+
+    .paragraph-left {
+        @include paragraph;
+        max-width: 42ch;
+        @media screen and (max-width:900px){
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+    }
+    .sobre-mi-main__textcontainer {
+        width: 50%;
+        max-width: 50%;
+        @media screen and (max-width:900px) {
+            width: 100%;
+            
+        }
+    }
+
+    .sobre-mi-main__photo-container{
+        display: flex;
+        height: fit-content;
+        width: 44%;
+        margin-top: 40px;
+        justify-self: flex-end;
+        align-items: flex-end;
+        @media screen and (max-width:900px){
+            width: 100%;
+        }
+        .sobre-mi-main__talent-photo{
+            max-width: 450px;
+            width: 100%;
+            height: auto;
+            padding: 0;
+            margin: 0 auto;
+            margin-right: 0;
+            border: $border-all;
+            position: relative;
+            z-index: 2;
+            @media screen and (max-width:900px) {
+                max-width: 100%;
+                
+            }
+        }
+    }
+
 }
 
 .sobre-mi-main__shape-one {
     position: absolute;
-    z-index: 1;
+    z-index: -1;
     top: -10px;
     left: -56px;
-    overflow: hidden;
+    path{
+        stroke:$dark-background ;
+        stroke-width: 2px;
+    }
+    @media screen and (max-width:1070px) {
+        transform: scale(0.8);
+        left: -86px;
+        path {
+            stroke-width: calc(2px / 0.8);
+        }
+        
+    }
+
+    @media screen and (max-width:800px) {
+        transform: scale(0.6);
+        left: -140px;
+        path {
+            stroke-width: calc(2px / 0.6);
+        }
+        
+    }
 
 }
 
 .sobre-mi-main__shape-two {
-    @extend .sobre-mi-main__shape-one;
+    position: absolute;
+    z-index: -1;
     top:260px;
     right: -42px;
-    left: auto;
+    
+    path{
+        stroke:$dark-background ;
+        stroke-width: 2px;
+    }
+
+    @media screen and (max-width:1070px) {
+        transform: scale(0.8);
+        right: -92px;
+        path {
+            stroke-width: calc(2px / 0.8);
+        }
+    }
+
+    @media screen and (max-width:900px) {
+        transform: scale(0.8);
+        right: -320px;
+        path {
+            stroke-width: calc(2px / 0.8);
+        }
+        
+    }
+
+    @media screen and (max-width:800px) {
+        transform: scale(0.6);
+        right: -300px;
+        path {
+            stroke-width: calc(2px / 0.6);
+        }
+        
+    }
+    
 }
 
-
-.left-line {
-    display: flex;
-    border-left: $border-all;
-    width: 1px;
-    height: 500px;
-    position: absolute;
-    left: 0;
-    top: 80px;
-    z-index: 1;
-}
-
-.right-line {
-    @extend .left-line;
-    right: 0;
-    left: auto;
-    top: 260px;
-
-}
 
 
 /* End of sobre mi --- start of donar */

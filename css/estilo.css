@@ -40,24 +40,27 @@ body {
   background-color: #F7FBFF;
   border: 2px #202020 solid;
   width: 100%;
+  max-width: 100vw;
   height: 80px;
   padding: 0 128px;
   font-size: 1rem;
   font-weight: 400;
   z-index: 3;
 }
+@media screen and (min-width: 1600px) {
+  .nav {
+    padding: 0 192px;
+  }
+}
 @media screen and (max-width: 800px) {
   .nav {
-    position: fixed;
-    top: 0;
-    background-color: #F7FBFF;
-    border: 2px #202020 solid;
-    width: 100%;
-    height: 80px;
     padding: 0 40px;
-    font-size: 1rem;
-    font-weight: 400;
-    z-index: 3;
+  }
+}
+@media screen and (max-width: 576px) {
+  .nav {
+    padding: 0 32px;
+    height: 64px;
   }
 }
 .nav .nav__links {
@@ -109,10 +112,10 @@ body {
 }
 @media screen and (max-width: 576px) {
   .main-hero {
-    grid-template-columns: 0.5fr 0.5fr 0.5fr 1fr;
+    grid-template-columns: repeat(6, 0.5fr);
     grid-template-rows: 1fr 1.25fr 1fr;
     gap: 2px;
-    grid-template-areas: "arte arte arte sobre-mi" "camaleon donar donar donar" "contacto contacto contacto contacto";
+    grid-template-areas: "arte arte arte sobre-mi sobre-mi sobre-mi" "camaleon camaleon donar donar donar donar" "contacto contacto contacto contacto contacto contacto";
   }
 }
 
@@ -316,19 +319,27 @@ body {
   color: #F7FBFF;
   text-decoration: underline;
 }
-.footer .footer__section-one .footer__legal {
+.footer .footer__legal {
   justify-self: center;
   align-self: center;
   color: #8a8a8a;
   font-size: 0.8rem;
+  text-align: center;
 }
-.footer .footer__section-two {
+@media screen and (max-width: 576px) {
+  .footer .footer__legal {
+    max-width: 34ch;
+    text-align: center;
+  }
+}
+
+.footer__section-two {
   width: 100%;
   display: flex;
   align-content: center;
   justify-content: center;
 }
-.footer .footer__section-two p {
+.footer__section-two p {
   font-size: 0.6rem;
   text-decoration: none;
   color: #F7FBFF;
@@ -336,7 +347,7 @@ body {
 }
 
 /* End of footer --- start of arte */
-.main, .donar-main, .sobre-mi-main {
+.main, .donar-main {
   max-width: 100vw;
   width: 100%;
   margin: 80px 0 0 0;
@@ -346,7 +357,7 @@ body {
   overflow-x: hidden;
 }
 @media screen and (max-width: 800px) {
-  .main, .donar-main, .sobre-mi-main {
+  .main, .donar-main {
     max-width: 100vw;
     width: 100%;
     margin: 80px 0 0 0;
@@ -357,10 +368,10 @@ body {
   }
 }
 @media screen and (max-width: 576px) {
-  .main, .donar-main, .sobre-mi-main {
+  .main, .donar-main {
     max-width: 100vw;
     width: 100%;
-    margin: 80px 0 0 0;
+    margin: 64px 0 0 0;
     border: 2px solid #202020;
     border-top: none;
     padding: 56px 32px;
@@ -368,7 +379,7 @@ body {
   }
 }
 @media screen and (min-width: 1600px) {
-  .main, .donar-main, .sobre-mi-main {
+  .main, .donar-main {
     max-width: 100vw;
     width: 100%;
     margin: 80px 0 0 0;
@@ -383,7 +394,26 @@ body {
   right: -40px;
   top: 102px;
   z-index: -1;
-  overflow: hidden;
+}
+@media screen and (max-width: 800px) {
+  .arte-shape {
+    transform: scale(0.7);
+    right: -100px;
+    top: 72px;
+  }
+  .arte-shape path {
+    stroke-width: 2.8571428571px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .arte-shape {
+    transform: scale(0.6);
+    right: -100px;
+    top: 42px;
+  }
+  .arte-shape path {
+    stroke-width: 3.3333333333px;
+  }
 }
 
 .h1-left {
@@ -408,12 +438,23 @@ body {
     text-align: center;
   }
 }
+@media screen and (max-width: 576px) {
+  .h1-left {
+    margin: 0;
+    text-align: left;
+  }
+}
 
 .paragraph-left {
   font-family: "Inter", sans-serif;
   font-size: 1rem;
   line-height: 1.5rem;
   max-width: 42ch;
+}
+@media screen and (max-width: 576px) {
+  .paragraph-left {
+    max-width: 28ch;
+  }
 }
 
 .masonry-grid {
@@ -473,15 +514,69 @@ body {
   margin-top: 48px;
 }
 
+#ancla {
+  position: absolute;
+  top: 0;
+  visibility: hidden;
+}
+
 /* End of arte --- start of sobre mi */
-.sobre-mi-main {
+.body-sobre-mi {
   background-color: #3DE984;
 }
-.sobre-mi-main .sobre-mi-main__container {
-  justify-content: space-between;
+
+.sobre-mi-main {
+  max-width: 100vw;
   width: 100%;
+  margin: 80px 0 0 0;
+  border: 2px solid #202020;
+  border-top: none;
+  padding: 120px 128px;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: nowrap;
 }
-.sobre-mi-main .sobre-mi-main__container .sobre-mi-main__text-container h1 {
+@media screen and (max-width: 800px) {
+  .sobre-mi-main {
+    max-width: 100vw;
+    width: 100%;
+    margin: 80px 0 0 0;
+    border: 2px solid #202020;
+    border-top: none;
+    padding: 72px 40px;
+    overflow-x: hidden;
+  }
+}
+@media screen and (max-width: 576px) {
+  .sobre-mi-main {
+    max-width: 100vw;
+    width: 100%;
+    margin: 64px 0 0 0;
+    border: 2px solid #202020;
+    border-top: none;
+    padding: 56px 32px;
+    overflow-x: hidden;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .sobre-mi-main {
+    max-width: 100vw;
+    width: 100%;
+    margin: 80px 0 0 0;
+    border: 2px solid #202020;
+    border-top: none;
+    padding: 120px 192px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .sobre-mi-main {
+    flex-direction: column;
+  }
+}
+.sobre-mi-main h1 {
   font-family: "Inter", sans-serif;
   font-size: 5rem;
   line-height: 5rem;
@@ -490,74 +585,153 @@ body {
   margin-bottom: 24px;
 }
 @media screen and (max-width: 768px) {
-  .sobre-mi-main .sobre-mi-main__container .sobre-mi-main__text-container h1 {
+  .sobre-mi-main h1 {
     font-size: 4rem;
     line-height: 4rem;
   }
 }
 @media screen and (max-width: 576px) {
-  .sobre-mi-main .sobre-mi-main__container .sobre-mi-main__text-container h1 {
+  .sobre-mi-main h1 {
     font-size: 3.5rem;
     line-height: 3.5rem;
     margin: 0 auto;
     text-align: center;
   }
 }
-.sobre-mi-main .sobre-mi-main__container .sobre-mi-main__text-container .subheading {
+@media screen and (max-width: 900px) {
+  .sobre-mi-main h1 {
+    text-align: center;
+  }
+}
+.sobre-mi-main .subheading {
   font-family: "Inter", sans-serif;
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-weight: 700;
+  margin-bottom: 32px;
 }
-.sobre-mi-main .sobre-mi-main__container .sobre-mi-main__text-container .parrafo {
+@media screen and (max-width: 900px) {
+  .sobre-mi-main .subheading {
+    text-align: center;
+  }
+}
+.sobre-mi-main .paragraph-left {
   font-family: "Inter", sans-serif;
   font-size: 1rem;
   line-height: 1.5rem;
   max-width: 42ch;
 }
-.sobre-mi-main .sobre-mi-main__container .sobre-mi-main__photo-container {
-  display: block;
-  margin-top: 40px;
+@media screen and (max-width: 900px) {
+  .sobre-mi-main .paragraph-left {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
-.sobre-mi-main .sobre-mi-main__container .sobre-mi-main__photo-container .sobre-mi-main__talent-photo {
+.sobre-mi-main .sobre-mi-main__textcontainer {
+  width: 50%;
+  max-width: 50%;
+}
+@media screen and (max-width: 900px) {
+  .sobre-mi-main .sobre-mi-main__textcontainer {
+    width: 100%;
+  }
+}
+.sobre-mi-main .sobre-mi-main__photo-container {
+  display: flex;
+  height: fit-content;
+  width: 44%;
+  margin-top: 40px;
+  justify-self: flex-end;
+  align-items: flex-end;
+}
+@media screen and (max-width: 900px) {
+  .sobre-mi-main .sobre-mi-main__photo-container {
+    width: 100%;
+  }
+}
+.sobre-mi-main .sobre-mi-main__photo-container .sobre-mi-main__talent-photo {
+  max-width: 450px;
   width: 100%;
   height: auto;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
+  margin-right: 0;
   border: 2px #202020 solid;
   position: relative;
   z-index: 2;
 }
+@media screen and (max-width: 900px) {
+  .sobre-mi-main .sobre-mi-main__photo-container .sobre-mi-main__talent-photo {
+    max-width: 100%;
+  }
+}
 
-.sobre-mi-main__shape-one, .sobre-mi-main__shape-two {
+.sobre-mi-main__shape-one {
   position: absolute;
-  z-index: 1;
+  z-index: -1;
   top: -10px;
   left: -56px;
-  overflow: hidden;
+}
+.sobre-mi-main__shape-one path {
+  stroke: #202020;
+  stroke-width: 2px;
+}
+@media screen and (max-width: 1070px) {
+  .sobre-mi-main__shape-one {
+    transform: scale(0.8);
+    left: -86px;
+  }
+  .sobre-mi-main__shape-one path {
+    stroke-width: 2.5px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .sobre-mi-main__shape-one {
+    transform: scale(0.6);
+    left: -140px;
+  }
+  .sobre-mi-main__shape-one path {
+    stroke-width: 3.3333333333px;
+  }
 }
 
 .sobre-mi-main__shape-two {
+  position: absolute;
+  z-index: -1;
   top: 260px;
   right: -42px;
-  left: auto;
 }
-
-.left-line, .right-line {
-  display: flex;
-  border-left: 2px #202020 solid;
-  width: 1px;
-  height: 500px;
-  position: absolute;
-  left: 0;
-  top: 80px;
-  z-index: 1;
+.sobre-mi-main__shape-two path {
+  stroke: #202020;
+  stroke-width: 2px;
 }
-
-.right-line {
-  right: 0;
-  left: auto;
-  top: 260px;
+@media screen and (max-width: 1070px) {
+  .sobre-mi-main__shape-two {
+    transform: scale(0.8);
+    right: -92px;
+  }
+  .sobre-mi-main__shape-two path {
+    stroke-width: 2.5px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .sobre-mi-main__shape-two {
+    transform: scale(0.8);
+    right: -320px;
+  }
+  .sobre-mi-main__shape-two path {
+    stroke-width: 2.5px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .sobre-mi-main__shape-two {
+    transform: scale(0.6);
+    right: -300px;
+  }
+  .sobre-mi-main__shape-two path {
+    stroke-width: 3.3333333333px;
+  }
 }
 
 /* End of sobre mi --- start of donar */
@@ -686,7 +860,7 @@ body {
   .contacto-main {
     max-width: 100vw;
     width: 100%;
-    margin: 80px 0 0 0;
+    margin: 64px 0 0 0;
     border: 2px solid #202020;
     border-top: none;
     padding: 56px 32px;
