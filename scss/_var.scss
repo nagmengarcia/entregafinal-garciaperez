@@ -155,8 +155,8 @@ $link-hovered-purpleblue: #6977F9;
         line-height: 4rem; 
     }
     @media screen and (max-width: 576px) {
-        font-size: 3.5rem;
-        line-height: 3.5rem;
+        font-size: 3rem;
+        line-height: 3rem;
         margin: 0 auto;
         text-align: center; 
     }
@@ -168,6 +168,13 @@ $link-hovered-purpleblue: #6977F9;
     font-size: 1.25rem;
     line-height: 1.5rem;
     font-weight: 700;
+
+    @media screen and (max-width: 576px) {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        margin: 0 auto;
+        text-align: center; 
+    }
 }
 
 @mixin paragraph {
