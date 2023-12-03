@@ -99,6 +99,22 @@ body {
   overflow: hidden;
   background-color: #202020;
 }
+@media screen and (max-width: 800px) {
+  .main-hero {
+    grid-template-columns: 0.5fr 0.5fr 0.5fr 1fr;
+    grid-template-rows: 1fr 1.25fr 1.25fr;
+    gap: 2px;
+    grid-template-areas: "arte arte arte sobre-mi" "camaleon camaleon donar donar" "contacto contacto contacto contacto";
+  }
+}
+@media screen and (max-width: 576px) {
+  .main-hero {
+    grid-template-columns: 0.5fr 0.5fr 0.5fr 1fr;
+    grid-template-rows: 1fr 1.25fr 1fr;
+    gap: 2px;
+    grid-template-areas: "arte arte arte sobre-mi" "camaleon donar donar donar" "contacto contacto contacto contacto";
+  }
+}
 
 .main__link {
   color: #202020;
@@ -106,6 +122,28 @@ body {
   font-size: 2rem;
   display: none;
   font-family: "Inter" sans-serif;
+  line-height: 2rem;
+  transition: all 400ms ease-in-out;
+}
+@media screen and (max-width: 800px) {
+  .main__link {
+    display: flex;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
+}
+
+.camaleon {
+  display: none;
+  grid-area: camaleon;
+  background-image: url(../images/home/home__camaleon-surf.png);
+  background-size: cover;
+  background-position: center;
+}
+@media screen and (max-width: 800px) {
+  .camaleon {
+    display: flex;
+  }
 }
 
 .arte {
@@ -117,6 +155,16 @@ body {
   text-align: center;
   grid-area: arte;
   background-image: url(../images/home/home__crustaceo-casco.png);
+}
+@media screen and (max-width: 800px) {
+  .arte {
+    background-image: none;
+  }
+}
+@media screen and (max-width: 800px) {
+  .arte {
+    background-color: #3DE984;
+  }
 }
 .arte:hover {
   background-image: none;
@@ -136,6 +184,16 @@ body {
   grid-area: sobre-mi;
   background-image: url(../images/home/home__tiburon-pirata.png);
 }
+@media screen and (max-width: 800px) {
+  .sobre-mi {
+    background-image: none;
+  }
+}
+@media screen and (max-width: 800px) {
+  .sobre-mi {
+    background-color: #C072FE;
+  }
+}
 .sobre-mi:hover {
   background-image: none;
   background-color: #C072FE;
@@ -154,6 +212,16 @@ body {
   grid-area: donar;
   background-image: url(../images/home/home__pajaro-arma.png);
 }
+@media screen and (max-width: 800px) {
+  .donar {
+    background-image: none;
+  }
+}
+@media screen and (max-width: 800px) {
+  .donar {
+    background-color: #B28C7B;
+  }
+}
 .donar:hover {
   background-image: none;
   background-color: #B28C7B;
@@ -171,6 +239,16 @@ body {
   text-align: center;
   grid-area: contacto;
   background-image: url(../images/home/home__camaleon-surf.png);
+}
+@media screen and (max-width: 800px) {
+  .contacto {
+    background-image: none;
+  }
+}
+@media screen and (max-width: 800px) {
+  .contacto {
+    background-color: #F6D526;
+  }
 }
 .contacto:hover {
   background-image: none;
@@ -231,11 +309,12 @@ body {
 .footer .footer__section-one .footer__linkgroups .footer__linkgroup .footer__link {
   font-size: 0.8rem;
   text-decoration: none;
-  color: #F7FBFF;
+  color: #6C6E70;
   transition: all 400ms ease-in-out;
 }
 .footer .footer__section-one .footer__linkgroups .footer__linkgroup .footer__link:hover {
-  color: #6977F9;
+  color: #F7FBFF;
+  text-decoration: underline;
 }
 .footer .footer__section-one .footer__legal {
   justify-self: center;
@@ -627,6 +706,7 @@ body {
 .contacto-main .contacto-main__title {
   display: flex;
   flex-direction: column;
+  text-align: center;
 }
 .contacto-main .contacto-main__title .contacto-main__h1 {
   font-family: "Inter", sans-serif;
@@ -663,10 +743,21 @@ body {
 }
 .contacto-main .form {
   margin: 0 auto;
+  width: 80%;
   margin-top: 64px;
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+@media screen and (max-width: 800px) {
+  .contacto-main .form {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .contacto-main .form {
+    width: 100%;
+  }
 }
 .contacto-main .form .form__input-row {
   display: flex;
