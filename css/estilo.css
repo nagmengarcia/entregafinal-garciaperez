@@ -72,6 +72,10 @@ body {
   transform: translateY(0%);
 }
 
+#menu-text {
+  transition: all 0.5s ease-in-out;
+}
+
 /*fin menu mobile*/
 .nav {
   display: flex;
