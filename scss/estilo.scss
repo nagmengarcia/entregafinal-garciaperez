@@ -54,7 +54,7 @@ body {
     @media screen and (max-width:576px) {
         padding: 32px;
 }
-
+}
 .menu-items.appear
 {
     transform: translateY(0%);
@@ -63,7 +63,7 @@ body {
 #menu-text {
     transition: all .5s ease-in-out;
 }
-}
+
 
 /*fin menu mobile*/
 
@@ -874,4 +874,4 @@ body {
                 stroke-width: 8px;
             }
         }
-}
+    }
