@@ -105,15 +105,15 @@ $link-hovered-purpleblue: #6977F9;
         justify-content: center;
         padding: 8px;
         font-size: 1rem;
-
+        cursor: pointer;
     @media screen and (max-width: 800px) {
         display: flex;
         align-items: center;
         justify-content: center;
         padding: 8px;
         font-size: 1rem;  
+        cursor: pointer;
     }
-
 }
 
 @mixin nav-items-desktop {
