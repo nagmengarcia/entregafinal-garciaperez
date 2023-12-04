@@ -63,6 +63,7 @@ body {
 #menu-text {
     transition: all .5s ease-in-out;
 }
+}
 
 /*fin menu mobile*/
 
@@ -851,27 +852,26 @@ body {
     z-index: -1;
     margin-top: -80px;
     left: -120px;
-    @media screen and (max-width:1000px) {
-        width: 280px;
-        path {
-            stroke-width: 2px;
+        @media screen and (max-width:1000px) {
+            width: 280px;
+            path {
+                stroke-width: 2px;
+            }
         }
-    }
-    @media screen and (max-width:800px) {
-        width: 160px;
-        margin-top: -100px;
-        left: -80px;
-        path {
-            stroke-width: 4px;
+        @media screen and (max-width:800px) {
+            width: 160px;
+            margin-top: -100px;
+            left: -80px;
+            path {
+                stroke-width: 4px;
+            }
         }
-    }
-    @media screen and (max-width:576px) {
-        width: 80px;
-        margin-top: -120px;
-        left: -30px;
-        path {
-            stroke-width: 8px;
+        @media screen and (max-width:576px) {
+            width: 80px;
+            margin-top: -120px;
+            left: -30px;
+            path {
+                stroke-width: 8px;
+            }
         }
-    }
 }
-
