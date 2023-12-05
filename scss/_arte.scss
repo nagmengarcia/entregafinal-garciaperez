@@ -1,0 +1,106 @@
+@import "./base/var";
+
+
+#ancla {
+    position:absolute;
+    top:0;
+    visibility: hidden;
+}
+
+
+.main {
+    @include main;
+
+    .h1-left{
+        @include h1;
+        @media screen and (max-width: 576px) {
+            margin: 0;
+            text-align: left;   
+        }
+    }
+
+    .paragraph-left{
+        @include paragraph;
+        max-width: 42ch;
+        @media screen and (max-width: 576px) {
+            max-width: 28ch;
+        }
+    }
+
+    .masonry-grid {
+        width: 100%;
+        display: flex;
+        gap: 16px;
+        margin: 0 auto;
+        margin-top: 48px;
+
+        @media screen and (max-width:600px){
+            flex-direction: column;
+        }
+
+        .masonry-grid__column {
+            width: calc(100% / 3);
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            @media screen and (max-width:600px){
+                width: 100%;
+            }
+        }
+
+        .masonry-grid__photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border: 2px solid black;
+        }
+    }
+
+    .scrim {
+        background: linear-gradient(to top, $ligth-background, #f7fbff00,);
+        width: 100%;
+        height: 200px;
+        position: relative;
+        z-index: 2;
+        margin-top: -180px;
+    }
+    
+    .button-primary{
+        @include button-primary;
+        margin: 0 auto;
+        /*a {
+            @include button-primary-text;
+        }*/
+    }
+    
+    .button-margin {
+        margin-top: 48px;
+    }
+}
+
+
+.arte-shape{
+    position: absolute;
+    right: -40px;
+    top: 102px;
+    z-index:-1;
+    @media screen and (max-width:800px) {
+        transform: scale(0.7);
+        right: -100px;
+        top: 72px;
+        path {
+            stroke-width: calc(2px / 0.7);
+        }
+        
+    }
+
+    @media screen and (max-width:576px) {
+        transform: scale(0.6);
+        right: -100px;
+        top: 42px;
+        path {
+            stroke-width: calc(2px / 0.6);
+        }
+        
+    }
+}

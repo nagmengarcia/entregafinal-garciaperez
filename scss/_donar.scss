@@ -1,0 +1,156 @@
+@import "./base/var";
+
+
+.donar-main {
+    @include main;
+    
+    .donar-main__title{
+        display: flex;
+        flex-direction: column;
+        
+        .donar-main__h1{
+            @include h1;
+            order: 2;
+            margin-bottom: 0;
+        }
+
+        .donar-main__subheading {
+            @include subheading;
+            order: 1;
+            margin-bottom: 16px;
+            line-height: 1rem;
+        }
+    }
+    
+    .donar-main__mp-link{
+        width: auto;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        margin-top: 32px;
+        
+        .donar-main__link-content{
+            display: flex;
+            gap: 16px;
+            padding: 24px;
+            background-color: $gray-background;
+            justify-items: center;
+            align-items: center;
+            
+            .donar-main__alias{
+                font-family: $ibm-plex-mono;
+                color: $text-dark-gray;
+                font-weight: 500;
+                font-size: 1rem;
+                letter-spacing: .1rem;
+                margin: auto;
+            }
+
+            .donar-main__icon{
+                stroke: $text-dark-gray;
+            }
+        }
+    }
+
+    .button-group{
+        margin: 0 auto;
+        margin-top: 32px;
+        display: flex;
+        flex-wrap: wrap;
+        width: fit-content;
+        gap: 16px;
+
+        .button-primary {
+            @include button-primary;
+            
+        }
+    }
+
+    .donar-main__imgs{
+        display: flex;
+        position: relative;
+        left: -64px;
+        top: 32px;
+        width: 100%;
+        margin-bottom: 32px;
+        justify-content: flex-start;
+        
+        @media screen and (max-width: 800px) {
+            left: auto;
+            right: auto;
+            justify-content: center;
+            top: 64px;
+            margin-bottom: 64px;
+        }
+
+        @media screen and (max-width: 576px) {
+            margin:0 auto;
+            left: auto;
+            right: auto;
+            justify-content: center;
+            top: 64px;
+            margin-bottom: 64px;
+            width: 80%;
+        }
+
+        .donar-main__img{
+            width: 480px;
+            z-index: -1;
+            
+            @media screen and (max-width:800px) {
+                width: 400px;
+                margin: 0 auto;
+                order: 2;    
+            }
+            
+            @media screen and (max-width:576px) {
+                width: 320px;
+                margin: 0 auto;
+                order: 2;
+                max-width: 100%;    
+            }
+        }
+
+        svg{
+            position: absolute;
+            z-index: -2;
+            width: 320px;
+            left: calc( (480px - 320px) / 3.4 );
+            top: -16px;
+            animation: rotate 12s linear infinite;
+            
+            @media screen and (max-width:800px) {
+                width: 220px;
+                left: auto;
+                right: auto;
+                position: absolute;
+                top: -60px;
+
+                path {
+                    stroke-width: 2px ;
+                }  
+            }
+
+            @media screen and (max-width:576px) {
+                height: 60%;
+                left: auto;
+                right: auto;
+                position: absolute;
+                top: -20px;
+
+                path {
+                    stroke-width: 2px ;
+                }  
+            }
+        }
+    }  
+}
+
+@keyframes rotate{
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

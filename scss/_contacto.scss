@@ -1,0 +1,209 @@
+@import "./base/var";
+
+
+.checked {
+    display: flex;
+    width: 8px;
+    height: 8px;
+    background-color: none;
+    position: relative;
+    left: -13.5px;
+    z-index: -1;
+    transform: scale(1, 1);
+    transition: all 400ms ease-in-out;
+    
+}
+
+
+.contacto-main {
+    @include main;
+    
+    .contacto-main__title{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        
+        .contacto-main__h1{
+            @include h1;
+            order: 2;
+            margin-bottom: 0;
+        }
+
+        .contacto-main__h2{
+            @include subheading;
+            order: 1;
+            margin-bottom: 16px;
+            line-height: 1rem;
+        }
+    }
+
+    .form {
+        margin: 0 auto;
+        width: 60%;
+        margin-top: 64px ;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        @media screen and (max-width:800px) {
+            width: 90%;
+        } 
+
+        @media screen and (max-width:576px) {
+            width: 100%;    
+        }  
+
+        .form__input-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+
+            .form__cell-container {
+                width: 100%;
+                
+                label {
+                    display: none;
+                }
+
+                .form__cell {
+                    display: flex;
+                    width: 100%;
+                    margin: 0;
+                    padding: 0;
+                    border: none;
+                    background-color: $ligth-background;
+                    border-bottom: $border-all;
+                    padding: 8px;
+                    font-family: $ibm-plex-mono;
+                    &:focus{
+                        @extend .form__cell;
+                        border-color: $link-hovered-purpleblue;
+                        outline: none;
+                    }
+                }   
+            }
+        }
+        
+        label {
+            display: none;
+        }
+        
+        .form__text-area {
+            width: 100%;
+            padding: 8px;
+            border: $border-all;
+            background-color: $ligth-background;
+            font-family: $ibm-plex-mono;
+            color: $text-dark-gray;
+            &:focus {
+                border-color: $link-hovered-purpleblue;
+                outline: none;
+            }
+            
+        }
+
+        .form__subscribe{
+            color: $text-black;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 2px;
+
+            .form__checkbox {
+                appearance: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                width: 16px;
+                height: 16px;
+                border: $border-all;
+                cursor: pointer;
+
+                &:checked + .checked {
+                    display: inline-block;
+                    background-color: $link-hovered-purpleblue;
+                    position: relative;
+                    left: -13.5px;
+                    transform: scale(1.2, 1.2);
+                }
+            } 
+        }
+        
+        .form__checkbox-text{
+                display: inline;
+                font-family: $inter;
+                font-size: .8rem;
+        }
+
+        
+        .button-primary{
+            @include button-primary-form;
+            width: 100%;
+        }
+    
+        input::placeholder, textarea::placeholder{
+            color: $text-placeholder;
+        }    
+    }
+}
+
+.svg-contacto-one {
+    position: absolute;
+    top: 120px;
+    right: -90px;
+    z-index: -1;
+    path {
+        stroke-width: 2px;
+    }
+    @media screen and (max-width:1000px) {
+        width: 280px;
+        path {
+            stroke-width: 2px;
+        }
+    }
+    @media screen and (max-width:800px) {
+        width: 160px;
+        top: 30px;
+        path {
+            stroke-width: 4px;
+        }
+    }
+    @media screen and (max-width:576px) {
+        width: 80px;
+        right: -40px;
+        top: -50px;
+        path {
+            stroke-width: 8px;
+        }
+    }
+}
+
+.svg-contacto-two{
+    position: absolute;
+    z-index: -1;
+    margin-top: -80px;
+    left: -120px;
+    @media screen and (max-width:1000px) {
+        width: 280px;
+       
+        path {
+            stroke-width: 2px;
+        }
+    }
+    @media screen and (max-width:800px) {
+        width: 160px;
+        margin-top: -100px;
+        left: -80px;
+        path {
+            stroke-width: 4px;
+        }
+    }
+    @media screen and (max-width:576px) {
+        width: 80px;
+        margin-top: -120px;
+        left: -30px;
+        
+        path {
+            stroke-width: 8px;
+        }
+    }
+}

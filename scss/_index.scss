@@ -1,0 +1,124 @@
+@import "./base/var";
+
+
+.main-hero {
+    height: 80vh;
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.5fr;
+    grid-template-rows: 1.25fr 1fr;
+    gap: 2px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "arte donar contacto"
+    "sobre-mi donar contacto";
+    padding: 0 2px 2px 2px;
+    overflow: hidden;
+    background-color: $dark-background;
+
+    @media screen and (max-width: 800px) {
+        grid-template-columns: .5fr .5fr .5fr 1fr; 
+        grid-template-rows: 1fr 1.25fr 1.25fr; 
+        gap: 2px; 
+        grid-template-areas: 
+          "arte arte arte sobre-mi"
+          "camaleon camaleon donar donar"
+          "contacto contacto contacto contacto"  
+    }
+    @media screen and (max-width: 576px) {
+        grid-template-columns: repeat(6, .5fr); 
+        grid-template-rows: 1fr 1.25fr 1fr; 
+        gap: 2px; 
+        grid-template-areas: 
+          "arte arte arte sobre-mi sobre-mi sobre-mi"
+          "camaleon camaleon donar donar donar donar"
+          "contacto contacto contacto contacto contacto contacto"  
+    }
+
+}
+
+
+.main__link {
+ @include home-section-links;
+}
+
+
+.camaleon {
+    display: none;
+    grid-area: camaleon;
+    background-image: url(../images/home/home__camaleon-surf.png);
+    background-size: cover;
+    background-position: center;
+    @media screen and (max-width:800px) {
+        display: flex;
+    }
+}
+
+
+.arte {
+    @include main-hero__section;
+    grid-area: arte; 
+    background-image: url(../images/home/home__crustaceo-casco.png);
+    @media screen and (max-width:800px) {
+        background-color: $green-solid;
+    }
+    &:hover{
+        background-image: none;
+        background-color: $green-solid;
+    }
+    &:hover .main__link {
+        display: flex;
+    }
+    
+}
+
+
+.sobre-mi {
+    @include main-hero__section;
+    grid-area: sobre-mi;
+    background-image: url(../images/home/home__tiburon-pirata.png);
+    @media screen and (max-width:800px) {
+        background-color: $purple-solid;
+    }
+    &:hover{
+        background-image: none;
+        background-color: $purple-solid;
+    }
+    &:hover .main__link {
+        display: flex;
+    }
+}
+
+
+.donar {
+    @include main-hero__section;
+    grid-area: donar;
+    background-image: url(../images/home/home__pajaro-arma.png);
+    @media screen and (max-width:800px) {
+        background-color: $brown-solid;
+    }
+    &:hover{
+        background-image: none;
+        background-color: $brown-solid;
+    }
+    &:hover .main__link {
+        display: flex;
+    }
+}
+
+
+.contacto {
+    @include main-hero__section;
+    grid-area: contacto;
+    background-image: url(../images/home/home__camaleon-surf.png);
+    @media screen and (max-width:800px) {
+        background-color: $yellow-solid;
+    }
+    &:hover{
+        background-image: none;
+        background-color: $yellow-solid;
+    }
+    &:hover .main__link {
+        display: flex;
+    }
+}

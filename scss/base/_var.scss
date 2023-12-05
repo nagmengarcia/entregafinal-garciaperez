@@ -1,38 +1,41 @@
+/* Solid colors - for backgrounds or buttons 👇 */
 $ligth-background:#F7FBFF;
 $ligther-background:#fdfdfd;
 $gray-background: #D8DCE0;
 $dark-background:#202020;
 $darker-background:#000000;
-$inter: 'Inter', sans-serif;
-$ibm-plex-mono:'IBM Plex Mono', monospace;;
-$border-all: 2px $dark-background solid;
+$green-solid:#3DE984;
+$purple-solid: #C072FE;
+$brown-solid:#B28C7B;
+$yellow-solid:#F6D526;
+
+
+/* Text colors - for text usage only 👇 */
 $text-black: #202020;
 $text-light: #F7FBFF;
 $text-gray:#8a8a8a;
 $text-placeholder:#d1d1d1;
 $text-dark-gray: #6C6E70;
-$green-solid:#3DE984;
-$purple-solid: #C072FE;
-$brown-solid:#B28C7B;
-$yellow-solid:#F6D526;
+
+
+/* Fonts 👇 */
+$inter: 'Inter', sans-serif;
+$ibm-plex-mono:'IBM Plex Mono', monospace;
+
+
+/* Link hovers 👇 */
 $link-hovered-purpleblue: #6977F9;
 
 
+/* Border all 👇 */
+$border-all: 2px $dark-background solid;
 
-@mixin home-section-links{
-    color: $text-black;
-    text-decoration: none;
-    font-size: 2rem;
-    display: none;
-    font-family: 'Inter' sans-serif;
-    line-height: 2rem;
-    transition: all 400ms ease-in-out;
-    @media screen and (max-width:800px) {
-        display: flex;
-        font-size: 1.2rem;
-        line-height: 1.5rem;
-    }
-}
+
+/* --------------- End of variables --------------- */
+
+
+/* MIXINX ZONE 👇👇👇 */
+
 
 @mixin main {
     max-width: 100vw;
@@ -73,6 +76,24 @@ $link-hovered-purpleblue: #6977F9;
 
     }
 }
+
+
+@mixin home-section-links{
+    color: $text-black;
+    text-decoration: none;
+    font-size: 2rem;
+    display: none;
+    font-family: 'Inter' sans-serif;
+    line-height: 2rem;
+    transition: all 400ms ease-in-out;
+    @media screen and (max-width:800px) {
+        display: flex;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+}
+
+
 
 @mixin nav-bar {
     position: fixed;
@@ -143,6 +164,7 @@ $link-hovered-purpleblue: #6977F9;
     }
 }
 
+
 @mixin h1 {
     font-family: $inter;
     font-size: 5rem;
@@ -184,33 +206,6 @@ $link-hovered-purpleblue: #6977F9;
 }
 
 
-@mixin button-primary{
-    border: none;
-    display: flex;
-}
-
-@mixin button-primary-text{
-    font-family: $inter;
-    font-weight: 600;
-    font-size: 1rem;
-    line-height: 1.5rem;
-    color: $text-light;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 4px;
-    background-color: $dark-background;
-    padding: 16px 20px;
-    transition: all 400ms ease-in-out;
-    &:hover {
-        background-color: $link-hovered-purpleblue;
-    }
-
-}
-
-
-
 
 
 @mixin footer {
@@ -226,3 +221,52 @@ $link-hovered-purpleblue: #6977F9;
     padding: 64px 40px ;
     }
 }
+
+/*Mixin button start 👇*/
+@mixin button-primary{
+    border: none;
+    display: flex;
+    a {
+        font-family: $inter;
+        font-weight: 600;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        color: $text-light;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+        background-color: $dark-background;
+        padding: 16px 20px;
+        transition: all 400ms ease-in-out;
+        
+        &:hover {
+            background-color: $link-hovered-purpleblue;
+        }
+    }
+}
+
+
+@mixin button-primary-form{
+    border: none;
+    display: flex;
+    font-family: $inter;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: $text-light;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    background-color: $dark-background;
+    padding: 16px 20px;
+    transition: all 400ms ease-in-out;
+        
+    &:hover {
+        background-color: $link-hovered-purpleblue;
+    }
+}
+/*Mixin button end 👆*/

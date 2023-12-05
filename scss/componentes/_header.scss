@@ -1,0 +1,87 @@
+@import "../base/var";
+
+
+.nav {
+    @include flex-column-centered;
+    @include nav-bar;
+
+    .nav__links {
+        @include nav-items-desktop;
+        
+        .nav__link {
+            text-decoration: none;
+            color: $text-black;
+            margin: 0 16px;
+            padding: 8px;
+            
+            &:hover {
+            color: $text-light;
+            background-color: $dark-background;
+            }
+        }
+
+        .nav__link:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.nav__link__selected {
+    border-bottom: 2px solid $dark-background;
+}
+
+
+/* inicio menu mobile*/
+
+.nav__menu--mobile {
+    @include nav-menu-mobile;
+    p { 
+    margin: 0 auto;
+    }
+}
+
+.menu-items {
+    display: none;
+    @media screen and (max-width:800px) {
+    position: absolute;
+    background-color: $dark-background;
+    height: auto;
+    display: flex;
+    width: 100%;
+    z-index: 2;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 40px;
+    transform: translateY(-100%);
+    transition: all 1s ease-in-out;
+        ul {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 16px;
+            li {
+                list-style: none;
+                border-bottom: 1px solid $gray-background;
+                a {
+                    text-align: right;
+                    text-decoration: none;
+                    color: $text-light;
+                }
+            }
+        }  
+    }
+    @media screen and (max-width:576px) {
+        padding: 32px;
+}
+}
+.menu-items.appear
+{
+    transform: translateY(0%);
+}
+
+#menu-text {
+    transition: all .5s ease-in-out;
+}
+
+
+/*fin menu mobile*/

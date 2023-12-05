@@ -1,0 +1,162 @@
+@import "./base/var";
+
+
+.sobre-mi-main {
+    @include main;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: nowrap;
+    
+    @media screen and (max-width:900px){
+        flex-direction: column;
+        
+    }
+    
+    h1 {
+        @include h1;
+        
+        @media screen and (max-width:900px){
+            text-align: center;
+        }
+    }
+    
+    .subheading {
+        @include subheading;
+        margin-bottom: 32px;
+        
+        @media screen and (max-width:900px){
+            text-align: center;
+        }
+    }
+
+    .paragraph-left {
+        @include paragraph;
+        max-width: 42ch;
+        a {
+            color: $text-black;
+            &:hover {
+                color: $link-hovered-purpleblue;
+            }
+        }
+        @media screen and (max-width:900px){
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+    }
+
+    .sobre-mi-main__textcontainer {
+        width: 50%;
+        max-width: 50%;
+        
+        @media screen and (max-width:900px) {
+            width: 100%;
+            
+        }
+    }
+
+    .sobre-mi-main__photo-container{
+        display: flex;
+        height: fit-content;
+        width: 44%;
+        margin-top: 40px;
+        justify-self: flex-end;
+        align-items: flex-end;
+        
+        @media screen and (max-width:900px){
+            width: 100%;
+        }
+        
+        .sobre-mi-main__talent-photo{
+            max-width: 450px;
+            width: 100%;
+            height: auto;
+            padding: 0;
+            margin: 0 auto;
+            margin-right: 0;
+            border: $border-all;
+            position: relative;
+            z-index: 2;
+            @media screen and (max-width:900px) {
+                max-width: 100%;
+                
+            }
+        }
+    }
+
+}
+
+.sobre-mi-main__shape-one {
+    position: absolute;
+    z-index: -1;
+    top: -10px;
+    left: -56px;
+    
+    path{
+        stroke:$dark-background ;
+        stroke-width: 2px;
+    }
+
+    @media screen and (max-width:1070px) {
+        transform: scale(0.8);
+        left: -86px;
+        path {
+            stroke-width: calc(2px / 0.8);
+        }
+    }
+
+    @media screen and (max-width:800px) {
+        transform: scale(0.6);
+        left: -140px;
+        path {
+            stroke-width: calc(2px / 0.6);
+        }    
+    }
+}
+
+.sobre-mi-main__shape-two {
+    position: absolute;
+    z-index: -1;
+    top:260px;
+    right: -42px;
+    
+    path{
+        stroke:$dark-background ;
+        stroke-width: 2px;
+    }
+
+    @media screen and (max-width:1070px) {
+        transform: scale(0.8);
+        right: -92px;
+        
+        path {
+            stroke-width: calc(2px / 0.8);
+        }
+    }
+
+    @media screen and (max-width:900px) {
+        transform: scale(0.8);
+        right: -320px;
+        
+        path {
+            stroke-width: calc(2px / 0.8);
+        }    
+    }
+
+    @media screen and (max-width:800px) {
+        transform: scale(0.6);
+        right: -300px;
+        
+        path {
+            stroke-width: calc(2px / 0.6);
+        }    
+    }  
+}
+
+
+.body-sobre-mi {
+    background-color: $green-solid;
+}
