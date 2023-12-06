@@ -218,7 +218,7 @@
   max-width: 100vw;
   width: 100%;
   margin: 80px 0 0 0;
-  border: 2px solid #202020;
+  border: 2px #202020 solid;
   border-top: none;
   padding: 120px 128px;
   overflow-x: hidden;
@@ -228,7 +228,7 @@
     max-width: 100vw;
     width: 100%;
     margin: 80px 0 0 0;
-    border: 2px solid #202020;
+    border: 2px #202020 solid;
     border-top: none;
     padding: 72px 40px;
     overflow-x: hidden;
@@ -239,7 +239,7 @@
     max-width: 100vw;
     width: 100%;
     margin: 64px 0 0 0;
-    border: 2px solid #202020;
+    border: 2px #202020 solid;
     border-top: none;
     padding: 56px 32px;
     overflow-x: hidden;
@@ -273,7 +273,6 @@
   .main .h1-left {
     font-size: 3rem;
     line-height: 3rem;
-    margin: 0 auto;
     text-align: center;
   }
 }
@@ -364,9 +363,9 @@
 .main-arte__svg-container {
   z-index: -1;
   position: absolute;
+  overflow: hidden;
   top: 100px;
   right: 2px;
-  overflow: hidden;
 }
 @media screen and (max-width: 800px) {
   .main-arte__svg-container {
@@ -445,7 +444,7 @@
   max-width: 100vw;
   width: 100%;
   margin: 80px 0 0 0;
-  border: 2px solid #202020;
+  border: 2px #202020 solid;
   border-top: none;
   padding: 120px 128px;
   overflow-x: hidden;
@@ -454,13 +453,14 @@
   justify-content: space-between;
   gap: 16px;
   flex-wrap: nowrap;
+  background-color: #3DE984;
 }
 @media screen and (max-width: 800px) {
   .sobre-mi-main {
     max-width: 100vw;
     width: 100%;
     margin: 80px 0 0 0;
-    border: 2px solid #202020;
+    border: 2px #202020 solid;
     border-top: none;
     padding: 72px 40px;
     overflow-x: hidden;
@@ -471,7 +471,7 @@
     max-width: 100vw;
     width: 100%;
     margin: 64px 0 0 0;
-    border: 2px solid #202020;
+    border: 2px #202020 solid;
     border-top: none;
     padding: 56px 32px;
     overflow-x: hidden;
@@ -499,6 +499,7 @@
   letter-spacing: -0.2rem;
   font-weight: 900;
   margin-bottom: 24px;
+  z-index: 2;
 }
 @media screen and (max-width: 768px) {
   .sobre-mi-main h1 {
@@ -510,7 +511,6 @@
   .sobre-mi-main h1 {
     font-size: 3rem;
     line-height: 3rem;
-    margin: 0 auto;
     text-align: center;
   }
 }
@@ -525,12 +525,12 @@
   line-height: 1.5rem;
   font-weight: 700;
   margin-bottom: 32px;
+  z-index: 2;
 }
 @media screen and (max-width: 576px) {
   .sobre-mi-main .subheading {
     font-size: 1rem;
     line-height: 1.5rem;
-    margin: 0 auto;
     text-align: center;
   }
 }
@@ -544,6 +544,7 @@
   font-size: 1rem;
   line-height: 1.5rem;
   max-width: 42ch;
+  z-index: 2;
 }
 .sobre-mi-main .paragraph-left a {
   color: #202020;
@@ -597,75 +598,61 @@
   }
 }
 
-.sobre-mi-main__shape-one {
-  position: absolute;
+.main-sobremi__svg-container-one {
   z-index: -1;
-  top: -10px;
-  left: -56px;
+  position: absolute;
+  overflow: hidden;
+  z-index: 1;
+  max-width: 98vw;
+  top: 0;
+  left: 2px;
 }
-.sobre-mi-main__shape-one path {
-  stroke: #202020;
-  stroke-width: 2px;
+.main-sobremi__svg-container-one .sobre-mi-main__shape-one {
+  position: relative;
+  left: -80px;
 }
-@media screen and (max-width: 1070px) {
-  .sobre-mi-main__shape-one {
-    transform: scale(0.8);
-    left: -86px;
+@media screen and (max-width: 1000px) {
+  .main-sobremi__svg-container-one .sobre-mi-main__shape-one {
+    transform: scale(0.7);
+    left: -120px;
   }
-  .sobre-mi-main__shape-one path {
-    stroke-width: 2.5px;
-  }
-}
-@media screen and (max-width: 800px) {
-  .sobre-mi-main__shape-one {
-    transform: scale(0.6);
-    left: -140px;
-  }
-  .sobre-mi-main__shape-one path {
-    stroke-width: 3.3333333333px;
+  .main-sobremi__svg-container-one .sobre-mi-main__shape-one path {
+    stroke-width: 2px;
   }
 }
 
-.sobre-mi-main__shape-two {
-  position: absolute;
+.main-sobremi__svg-container-two {
   z-index: -1;
-  top: 260px;
-  right: -42px;
+  position: absolute;
+  overflow: hidden;
+  z-index: 1;
+  bottom: 2px;
+  right: 2px;
+  max-width: 98vw;
 }
-.sobre-mi-main__shape-two path {
-  stroke: #202020;
-  stroke-width: 2px;
+@media screen and (max-width: 800px) {
+  .main-sobremi__svg-container-two {
+    bottom: -320px;
+  }
 }
-@media screen and (max-width: 1070px) {
-  .sobre-mi-main__shape-two {
-    transform: scale(0.8);
-    right: -92px;
-  }
-  .sobre-mi-main__shape-two path {
-    stroke-width: 2.5px;
-  }
+.main-sobremi__svg-container-two .sobre-mi-main__shape-two {
+  position: relative;
+  right: -160px;
+  z-index: 1;
 }
 @media screen and (max-width: 900px) {
-  .sobre-mi-main__shape-two {
-    transform: scale(0.8);
+  .main-sobremi__svg-container-two .sobre-mi-main__shape-two {
     right: -320px;
-  }
-  .sobre-mi-main__shape-two path {
-    stroke-width: 2.5px;
   }
 }
 @media screen and (max-width: 800px) {
-  .sobre-mi-main__shape-two {
-    transform: scale(0.6);
-    right: -300px;
-  }
-  .sobre-mi-main__shape-two path {
-    stroke-width: 3.3333333333px;
+  .main-sobremi__svg-container-two .sobre-mi-main__shape-two {
+    right: -200px;
   }
 }
 
 .body-sobre-mi {
-  background-color: #3DE984;
+  background-color: #F7FBFF;
 }
 
 /* Solid colors - for backgrounds or buttons 👇 */
@@ -684,7 +671,7 @@
   max-width: 100vw;
   width: 100%;
   margin: 80px 0 0 0;
-  border: 2px solid #202020;
+  border: 2px #202020 solid;
   border-top: none;
   padding: 120px 128px;
   overflow-x: hidden;
@@ -694,7 +681,7 @@
     max-width: 100vw;
     width: 100%;
     margin: 80px 0 0 0;
-    border: 2px solid #202020;
+    border: 2px #202020 solid;
     border-top: none;
     padding: 72px 40px;
     overflow-x: hidden;
@@ -705,7 +692,7 @@
     max-width: 100vw;
     width: 100%;
     margin: 64px 0 0 0;
-    border: 2px solid #202020;
+    border: 2px #202020 solid;
     border-top: none;
     padding: 56px 32px;
     overflow-x: hidden;
@@ -745,7 +732,6 @@
   .donar-main .donar-main__title .donar-main__h1 {
     font-size: 3rem;
     line-height: 3rem;
-    margin: 0 auto;
     text-align: center;
   }
 }
@@ -762,7 +748,6 @@
   .donar-main .donar-main__title .donar-main__subheading {
     font-size: 1rem;
     line-height: 1.5rem;
-    margin: 0 auto;
     text-align: center;
   }
 }
@@ -798,6 +783,7 @@
   display: flex;
   flex-wrap: wrap;
   width: fit-content;
+  justify-content: center;
   gap: 16px;
 }
 .donar-main .button-group .button-primary {
@@ -939,7 +925,7 @@
   max-width: 100vw;
   width: 100%;
   margin: 80px 0 0 0;
-  border: 2px solid #202020;
+  border: 2px #202020 solid;
   border-top: none;
   padding: 120px 128px;
   overflow-x: hidden;
@@ -949,7 +935,7 @@
     max-width: 100vw;
     width: 100%;
     margin: 80px 0 0 0;
-    border: 2px solid #202020;
+    border: 2px #202020 solid;
     border-top: none;
     padding: 72px 40px;
     overflow-x: hidden;
@@ -960,7 +946,7 @@
     max-width: 100vw;
     width: 100%;
     margin: 64px 0 0 0;
-    border: 2px solid #202020;
+    border: 2px #202020 solid;
     border-top: none;
     padding: 56px 32px;
     overflow-x: hidden;
@@ -1001,7 +987,6 @@
   .contacto-main .contacto-main__title .contacto-main__h1 {
     font-size: 3rem;
     line-height: 3rem;
-    margin: 0 auto;
     text-align: center;
   }
 }
@@ -1018,7 +1003,6 @@
   .contacto-main .contacto-main__title .contacto-main__h2 {
     font-size: 1rem;
     line-height: 1.5rem;
-    margin: 0 auto;
     text-align: center;
   }
 }
@@ -1134,78 +1118,152 @@
   color: #d1d1d1;
 }
 
-.svg-contacto-one {
-  position: absolute;
-  top: 120px;
-  right: -90px;
+.contacto-main__svg-container-one {
   z-index: -1;
-}
-.svg-contacto-one path {
-  stroke-width: 2px;
-}
-@media screen and (max-width: 1000px) {
-  .svg-contacto-one {
-    width: 280px;
-  }
-  .svg-contacto-one path {
-    stroke-width: 2px;
-  }
+  position: absolute;
+  overflow: hidden;
+  max-width: 98vw;
+  top: 100px;
+  right: 2px;
 }
 @media screen and (max-width: 800px) {
-  .svg-contacto-one {
-    width: 160px;
-    top: 30px;
-  }
-  .svg-contacto-one path {
-    stroke-width: 4px;
+  .contacto-main__svg-container-one {
+    top: 60px;
   }
 }
 @media screen and (max-width: 576px) {
-  .svg-contacto-one {
-    width: 80px;
-    right: -40px;
-    top: -50px;
+  .contacto-main__svg-container-one {
+    top: -10px;
   }
-  .svg-contacto-one path {
-    stroke-width: 8px;
+}
+.contacto-main__svg-container-one .svg-contacto-one {
+  position: relative;
+  right: -100px;
+}
+@media screen and (max-width: 800px) {
+  .contacto-main__svg-container-one .svg-contacto-one {
+    right: -120px;
+    transform: scale(0.6);
+  }
+  .contacto-main__svg-container-one .svg-contacto-one path {
+    stroke-width: 3.3333333333px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .contacto-main__svg-container-one .svg-contacto-one {
+    right: -160px;
+    transform: scale(0.4);
+  }
+  .contacto-main__svg-container-one .svg-contacto-one path {
+    stroke-width: 5px;
   }
 }
 
-.svg-contacto-two {
-  position: absolute;
+.contacto-main__svg-container-two {
   z-index: -1;
-  margin-top: -80px;
+  position: absolute;
+  overflow: hidden;
+  max-width: 98vw;
+  left: 2px;
+  bottom: -200px;
+}
+@media screen and (max-width: 800px) {
+  .contacto-main__svg-container-two {
+    bottom: -100px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .contacto-main__svg-container-two {
+    bottom: -80px;
+  }
+}
+.contacto-main__svg-container-two .svg-contacto-two {
+  position: relative;
   left: -120px;
 }
-@media screen and (max-width: 1000px) {
-  .svg-contacto-two {
-    width: 280px;
-  }
-  .svg-contacto-two path {
-    stroke-width: 2px;
-  }
-}
 @media screen and (max-width: 800px) {
-  .svg-contacto-two {
-    width: 160px;
-    margin-top: -100px;
-    left: -80px;
+  .contacto-main__svg-container-two .svg-contacto-two {
+    left: -130px;
+    transform: scale(0.6);
   }
-  .svg-contacto-two path {
-    stroke-width: 4px;
+  .contacto-main__svg-container-two .svg-contacto-two path {
+    stroke-width: 3.3333333333px;
   }
 }
 @media screen and (max-width: 576px) {
-  .svg-contacto-two {
-    width: 80px;
-    margin-top: -120px;
-    left: -30px;
+  .contacto-main__svg-container-two .svg-contacto-two {
+    left: -140px;
+    transform: scale(0.4);
   }
-  .svg-contacto-two path {
-    stroke-width: 8px;
+  .contacto-main__svg-container-two .svg-contacto-two path {
+    stroke-width: 5px;
   }
 }
 
+/*
+.svg-contacto-one {
+    position: absolute;
+    top: 120px;
+    right: -90px;
+    z-index: -1;
+    path {
+        stroke-width: 2px;
+    }
+    @media screen and (max-width:1000px) {
+        width: 280px;
+        path {
+            stroke-width: 2px;
+        }
+    }
+    @media screen and (max-width:800px) {
+        width: 160px;
+        top: 30px;
+        path {
+            stroke-width: 4px;
+        }
+    }
+    @media screen and (max-width:576px) {
+        width: 80px;
+        right: -40px;
+        top: -50px;
+        path {
+            stroke-width: 8px;
+        }
+    }
+}
+
+.svg-contacto-two{
+    position: absolute;
+    z-index: -1;
+    margin-top: -80px;
+    left: -120px;
+    @media screen and (max-width:1000px) {
+        width: 280px;
+
+        path {
+            stroke-width: 2px;
+        }
+    }
+    @media screen and (max-width:800px) {
+        width: 160px;
+        margin-top: -100px;
+        left: -80px;
+        path {
+            stroke-width: 4px;
+        }
+    }
+    @media screen and (max-width:576px) {
+        width: 80px;
+        margin-top: -120px;
+        left: -30px;
+
+        path {
+            stroke-width: 8px;
+        }
+    }
+}
+
+*/
 /* Solid colors - for backgrounds or buttons 👇 */
 /* Text colors - for text usage only 👇 */
 /* Fonts 👇 */
@@ -1227,6 +1285,8 @@
   justify-content: center;
   align-items: center;
   gap: 64px;
+  position: relative;
+  z-index: 2;
 }
 @media screen and (max-width: 800px) {
   .footer {

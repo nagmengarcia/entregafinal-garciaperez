@@ -146,6 +146,73 @@
     }
 }
 
+
+
+
+.contacto-main__svg-container-one{
+    @include svg-container;
+    max-width: 98vw;
+    top: 100px;
+    right: 2px;
+    @media screen and (max-width:800px){
+        top: 60px;
+    }
+    @media screen and (max-width:576px){
+        top: -10px;
+    }
+
+    .svg-contacto-one{
+        position: relative;
+        right: -100px;
+        @media screen and (max-width:800px) {
+            right: -120px;
+            transform: scale(.6);
+            path {
+                stroke-width: calc(2px / .6)
+            }  
+        }
+        @media screen and (max-width:576px) {
+            right: -160px;
+            transform: scale(.4);
+            path {
+                stroke-width: calc(2px / .4)
+            }  
+        } 
+    }
+}
+
+.contacto-main__svg-container-two{
+    @include svg-container;
+    max-width: 98vw;
+    left: 2px;
+    bottom: -200px;
+    @media screen and (max-width:800px){
+        bottom: -100px;
+    }
+    @media screen and (max-width:576px){
+        bottom: -80px;
+    }
+    .svg-contacto-two{
+        position: relative;
+        left: -120px;
+        @media screen and (max-width:800px) {
+            left: -130px;
+            transform: scale(.6);
+            path {
+                stroke-width: calc(2px / .6)
+            }  
+        }
+        @media screen and (max-width:576px) {
+            left: -140px;
+            transform: scale(.4);
+            path {
+                stroke-width: calc(2px / .4)
+            }  
+        } 
+    }
+}
+
+/*
 .svg-contacto-one {
     position: absolute;
     top: 120px;
@@ -207,3 +274,5 @@
         }
     }
 }
+
+*/

@@ -40,7 +40,7 @@ $border-all: 2px $dark-background solid;
     max-width: 100vw;
     width: 100%;
     margin:80px 0 0 0;
-    border: 2px solid $dark-background ;
+    border: $border-all;
     border-top: none;
     padding: 120px 128px;
     overflow-x: hidden;
@@ -49,7 +49,7 @@ $border-all: 2px $dark-background solid;
         max-width: 100vw;
         width: 100%;
         margin:80px 0 0 0;
-        border: 2px solid $dark-background ;
+        border:$border-all;
         border-top: none;
         padding: 72px 40px;
         overflow-x: hidden;
@@ -59,7 +59,7 @@ $border-all: 2px $dark-background solid;
         max-width: 100vw;
         width: 100%;
         margin:64px 0 0 0;
-        border: 2px solid $dark-background ;
+        border: $border-all;
         border-top: none;
         padding: 56px 32px ;
         overflow-x: hidden;
@@ -173,6 +173,12 @@ $border-all: 2px $dark-background solid;
     }
 }
 
+@mixin svg-container{
+    z-index: -1;
+    position: absolute;
+    overflow: hidden;
+}
+
 /*Mixin fonts start 👇*/
 @mixin h1 {
     font-family: $inter;
@@ -188,7 +194,6 @@ $border-all: 2px $dark-background solid;
     @media screen and (max-width: 576px) {
         font-size: 3rem;
         line-height: 3rem;
-        margin: 0 auto;
         text-align: center; 
     }
 }
@@ -202,7 +207,6 @@ $border-all: 2px $dark-background solid;
     @media screen and (max-width: 576px) {
         font-size: 1rem;
         line-height: 1.5rem;
-        margin: 0 auto;
         text-align: center; 
     }
 }

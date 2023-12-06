@@ -58,11 +58,11 @@
         display: flex;
         flex-wrap: wrap;
         width: fit-content;
+        justify-content: center;
         gap: 16px;
 
         .button-primary {
-            @include button-primary;
-            
+            @include button-primary;  
         }
     }
 

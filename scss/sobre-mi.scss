@@ -8,7 +8,7 @@
     justify-content: space-between;
     gap: 16px;
     flex-wrap: nowrap;
-    
+    background-color: $green-solid;
     @media screen and (max-width:900px){
         flex-direction: column;
         
@@ -16,6 +16,7 @@
     
     h1 {
         @include h1;
+        z-index: 2;
         
         @media screen and (max-width:900px){
             text-align: center;
@@ -25,6 +26,7 @@
     .subheading {
         @include subheading;
         margin-bottom: 32px;
+        z-index: 2;
         
         @media screen and (max-width:900px){
             text-align: center;
@@ -34,6 +36,7 @@
     .paragraph-left {
         @include paragraph;
         max-width: 42ch;
+        z-index: 2;
         a {
             color: $text-black;
             &:hover {
@@ -89,74 +92,50 @@
 
 }
 
-.sobre-mi-main__shape-one {
-    position: absolute;
-    z-index: -1;
-    top: -10px;
-    left: -56px;
-    
-    path{
-        stroke:$dark-background ;
-        stroke-width: 2px;
-    }
-
-    @media screen and (max-width:1070px) {
-        transform: scale(0.8);
-        left: -86px;
-        path {
-            stroke-width: calc(2px / 0.8);
+.main-sobremi__svg-container-one{
+    @include svg-container;
+    z-index: 1;
+    max-width: 98vw;
+    top: 0;
+    left: 2px;
+    .sobre-mi-main__shape-one{
+        position: relative;
+        left: -80px;
+        @media screen and (max-width:1000px) {
+            transform: scale(.7);
+            left: -120px;
+            path{
+                stroke-width: calc(1.4px / .7);
+            }    
         }
-    }
-
-    @media screen and (max-width:800px) {
-        transform: scale(0.6);
-        left: -140px;
-        path {
-            stroke-width: calc(2px / 0.6);
-        }    
     }
 }
 
-.sobre-mi-main__shape-two {
-    position: absolute;
-    z-index: -1;
-    top:260px;
-    right: -42px;
-    
-    path{
-        stroke:$dark-background ;
-        stroke-width: 2px;
-    }
-
-    @media screen and (max-width:1070px) {
-        transform: scale(0.8);
-        right: -92px;
-        
-        path {
-            stroke-width: calc(2px / 0.8);
-        }
-    }
-
-    @media screen and (max-width:900px) {
-        transform: scale(0.8);
-        right: -320px;
-        
-        path {
-            stroke-width: calc(2px / 0.8);
-        }    
-    }
+.main-sobremi__svg-container-two{
+    @include svg-container;
+    z-index: 1;
+    bottom: 2px;
+    right: 2px;
+    max-width: 98vw;
 
     @media screen and (max-width:800px) {
-        transform: scale(0.6);
-        right: -300px;
-        
-        path {
-            stroke-width: calc(2px / 0.6);
-        }    
-    }  
-}
+        bottom: -320px;
+    }
+    .sobre-mi-main__shape-two{
+        position: relative;
+        right: -160px;
+        z-index: 1;
 
+        @media screen and (max-width:900px) {
+            right: -320px;
+            
+        }
+        @media screen and (max-width:800px) {
+            right: -200px;
+        }
+    }
+}
 
 .body-sobre-mi {
-    background-color: $green-solid;
+    background-color: $ligth-background;
 }
