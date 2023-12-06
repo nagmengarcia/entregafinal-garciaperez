@@ -46,6 +46,7 @@
 }
 @media screen and (max-width: 576px) {
   .main-hero {
+    margin-top: 64px;
     grid-template-columns: repeat(6, 0.5fr);
     grid-template-rows: 1fr 1.25fr 1fr;
     gap: 2px;
@@ -1361,8 +1362,10 @@
     position: fixed;
     background-color: #202020;
     height: 100vh;
+    width: 100vw;
     display: flex;
     width: 100%;
+    max-width: 100vw;
     z-index: 3;
     justify-content: flex-end;
     align-items: flex-start;
@@ -1394,6 +1397,8 @@
 
 .menu-items.appear {
   transform: translateY(0%);
+  width: 100vw;
+  max-width: 100vw;
 }
 
 #menu-text {

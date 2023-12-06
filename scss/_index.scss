@@ -26,6 +26,7 @@
           "contacto contacto contacto contacto"  
     }
     @media screen and (max-width: 576px) {
+        margin-top: 64px;
         grid-template-columns: repeat(6, .5fr); 
         grid-template-rows: 1fr 1.25fr 1fr; 
         gap: 2px; 
