@@ -361,33 +361,74 @@
   margin-top: 48px;
 }
 
-.arte-shape {
-  position: absolute;
-  right: -40px;
-  top: 102px;
+.main-arte__svg-container {
   z-index: -1;
+  position: absolute;
+  top: 100px;
+  right: 2px;
+  overflow: hidden;
 }
 @media screen and (max-width: 800px) {
-  .arte-shape {
-    transform: scale(0.7);
-    right: -100px;
-    top: 72px;
-  }
-  .arte-shape path {
-    stroke-width: 2.8571428571px;
+  .main-arte__svg-container {
+    top: 80px;
   }
 }
 @media screen and (max-width: 576px) {
-  .arte-shape {
-    transform: scale(0.6);
-    right: -100px;
-    top: 42px;
+  .main-arte__svg-container {
+    top: 40px;
   }
-  .arte-shape path {
+}
+.main-arte__svg-container .arte-shape {
+  position: relative;
+  right: -60px;
+}
+@media screen and (max-width: 800px) {
+  .main-arte__svg-container .arte-shape {
+    transform: scale(0.74);
+    right: -80px;
+  }
+  .main-arte__svg-container .arte-shape path {
+    stroke-width: 2.7027027027px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .main-arte__svg-container .arte-shape {
+    transform: scale(0.6);
+    right: -120px;
+  }
+  .main-arte__svg-container .arte-shape path {
     stroke-width: 3.3333333333px;
   }
 }
 
+/*
+.arte-shape{
+    position: absolute;
+    right: -40px;
+    top: 102px;
+    z-index:-1;
+    @media screen and (max-width:800px) {
+        transform: scale(0.7);
+        right: -100px;
+        top: 72px;
+        path {
+            stroke-width: calc(2px / 0.7);
+        }
+
+    }
+
+    @media screen and (max-width:576px) {
+        transform: scale(0.6);
+        right: -100px;
+        top: 42px;
+        path {
+            stroke-width: calc(2px / 0.6);
+        }
+
+    }
+}
+
+*/
 /* Solid colors - for backgrounds or buttons 👇 */
 /* Text colors - for text usage only 👇 */
 /* Fonts 👇 */
