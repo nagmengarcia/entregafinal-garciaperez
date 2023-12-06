@@ -14,7 +14,6 @@
     .h1-left{
         @include h1;
         @media screen and (max-width: 576px) {
-            margin: 0;
             text-align: left;   
         }
     }
@@ -88,6 +87,7 @@
     @media screen and (max-width:576px){
         top: 40px;
     }
+    
     .arte-shape {
         position: relative;
         right: -60px;
@@ -101,6 +101,13 @@
         @media screen and (max-width:576px){
             transform: scale(.6);
             right: -120px;
+            path {
+                stroke-width: calc(2px / .6);
+            }
+        }
+        @media screen and (max-width:460px){
+            transform: scale(.6);
+            right: -190px;
             path {
                 stroke-width: calc(2px / .6);
             }

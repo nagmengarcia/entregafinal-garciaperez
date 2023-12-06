@@ -278,7 +278,6 @@
 }
 @media screen and (max-width: 576px) {
   .main .h1-left {
-    margin: 0;
     text-align: left;
   }
 }
@@ -394,6 +393,15 @@
   .main-arte__svg-container .arte-shape {
     transform: scale(0.6);
     right: -120px;
+  }
+  .main-arte__svg-container .arte-shape path {
+    stroke-width: 3.3333333333px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .main-arte__svg-container .arte-shape {
+    transform: scale(0.6);
+    right: -190px;
   }
   .main-arte__svg-container .arte-shape path {
     stroke-width: 3.3333333333px;
