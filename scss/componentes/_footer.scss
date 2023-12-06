@@ -28,6 +28,8 @@
                 display: flex;
                 flex-direction: column;
                 gap: 8px;
+
+            
                 
                 .footer__grouptitle{
                     font-size: .8rem;
@@ -46,6 +48,15 @@
                     color: $text-light;
                     text-decoration: underline;
                 }
+
+                .p-exception {
+                    margin-bottom: 0px;
+                    &:hover {
+                        text-decoration: none;
+                        color: $text-dark-gray;
+                    }
+                }
+
             }
         }
     }
@@ -76,4 +87,5 @@
             color: $text-light;
             margin-top: 8px;
         }
+
 }

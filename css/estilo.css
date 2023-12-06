@@ -1234,6 +1234,13 @@
   color: #F7FBFF;
   text-decoration: underline;
 }
+.footer .footer__section-one .footer__linkgroups .footer__linkgroup .p-exception {
+  margin-bottom: 0px;
+}
+.footer .footer__section-one .footer__linkgroups .footer__linkgroup .p-exception:hover {
+  text-decoration: none;
+  color: #6C6E70;
+}
 .footer .footer__legal {
   justify-self: center;
   align-self: center;
