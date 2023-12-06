@@ -20,3 +20,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const formulario = document.getElementById("form");
+
+    formulario.addEventListener("submit", function (event) {
+        
+        event.preventDefault();
+
+        const nombreSender = document.getElementById("name").value;
+
+        alert("Felicidades " + nombreSender + " ,se envió tu mensaje!");
+
+        formulario.reset();
+    });
+});
