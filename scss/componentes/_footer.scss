@@ -81,12 +81,13 @@
         display: flex;
         align-content: center;
         justify-content: center;
-        
-        p {
-            font-size: .6rem;
+        a {
             text-decoration: none;
-            color: $text-light;
-            margin-top: 8px;
+            p {
+                font-size: .6rem;
+                text-decoration: none;
+                color: $text-light;
+                margin-top: 8px;
+            }
         }
-
 }

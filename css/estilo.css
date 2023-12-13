@@ -1370,7 +1370,10 @@
   align-content: center;
   justify-content: center;
 }
-.footer__section-two p {
+.footer__section-two a {
+  text-decoration: none;
+}
+.footer__section-two a p {
   font-size: 0.6rem;
   text-decoration: none;
   color: #F7FBFF;
