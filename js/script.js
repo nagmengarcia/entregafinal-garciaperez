@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-  document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
     const formulario = document.getElementById("form");
 
     formulario.addEventListener("submit", function (event) {
@@ -36,3 +36,30 @@ document.addEventListener("DOMContentLoaded", function () {
         formulario.reset();
     });
 });
+
+function copyText () {
+  var alias = document.getElementById("alias-mp");
+  var textarea = document.createElement("textarea");
+
+  textarea.value = alias.textContent;
+
+  document.body.appendChild(textarea);
+
+
+  textarea.select();
+  textarea.setSelectionRange(0, 99999);
+
+  try {
+    // Intentar copiar el texto al portapapeles usando el API del Portapapeles
+    document.execCommand("copy");
+    alert("Texto copiado: " + alias.textContent);
+} catch (err) {
+    console.error("Error al intentar copiar el texto: ", err);
+} finally {
+    // Eliminar el área de texto temporal
+    document.body.removeChild(areaDeTexto);
+};
+
+}
+
+document.getElementById("icono-copiar").onclick = copyText;

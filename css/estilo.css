@@ -905,6 +905,10 @@
     transform: rotate(360deg);
   }
 }
+#icono-copiar {
+  cursor: pointer;
+}
+
 /* Solid colors - for backgrounds or buttons 👇 */
 /* Text colors - for text usage only 👇 */
 /* Fonts 👇 */
