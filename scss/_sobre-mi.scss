@@ -52,8 +52,8 @@
     }
 
     .sobre-mi-main__textcontainer {
-        width: 50%;
-        max-width: 50%;
+        width: 48%;
+        max-width: 48%;
         
         @media screen and (max-width:900px) {
             width: 100%;
@@ -64,13 +64,14 @@
     .sobre-mi-main__photo-container{
         display: flex;
         height: fit-content;
-        width: 44%;
-        margin-top: 40px;
+        width: 40%;
+        margin: 0 auto;
         justify-self: flex-end;
         align-items: flex-end;
         
         @media screen and (max-width:900px){
-            width: 100%;
+            width: 60%;
+            margin-top: 32px;
         }
         
         .sobre-mi-main__talent-photo{
