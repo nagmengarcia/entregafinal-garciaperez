@@ -1,0 +1,62 @@
+@import "./base/var";
+
+.error-main {
+    @include main;
+    min-height: 100vh;
+    @media screen and (max-width:800px) {
+        min-height: none;  
+    }
+
+    .error-main__title {
+        display: flex;
+        flex-direction: column;
+        .error-main__h1{
+            @include h1;
+        }
+        .error-main__text{
+            @include paragraph;
+            max-width: 28ch;
+            margin: 0 auto;
+        }
+    }
+    .button-primary {
+        @include button-primary;
+        margin: 32px auto;
+    }
+
+    .error-main__img {
+        position: absolute;
+        left: 0;
+        top: 30vh;
+        height: 60vh;
+       
+        @media screen and (max-width:800px) {
+            position: relative;
+            height: auto;
+            top: 20px;
+            left: -80px;   
+            width: 90vw;
+        }
+
+        @media screen and (max-width:800px) {
+            position: relative;
+            height: auto;
+            top: 20px;
+            left: -40px;   
+            width: 100vw;
+        }
+        
+        img {
+            position: relative;
+            left: -60px;
+            top: 0;
+            z-index: -2;
+            @media screen and (max-width:900px) {
+                left: -100px;   
+            }
+            @media screen and (max-width:800px) {
+                left: 0px;   
+            }
+        }
+    }
+}

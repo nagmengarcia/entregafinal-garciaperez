@@ -1250,6 +1250,165 @@
 /*Mixin button start 👇*/
 /*Mixin button end */
 /* MIXINX ZONE 👆👆👆 */
+.error-main {
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -o-border-radius: 0;
+  max-width: 100vw;
+  width: 100%;
+  margin: 80px 0 0 0;
+  border: 2px #202020 solid;
+  border-top: none;
+  padding: 120px 128px;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+@media screen and (max-width: 800px) {
+  .error-main {
+    max-width: 100vw;
+    width: 100%;
+    margin: 80px 0 0 0;
+    border: 2px #202020 solid;
+    border-top: none;
+    padding: 72px 40px;
+    overflow-x: hidden;
+  }
+}
+@media screen and (max-width: 576px) {
+  .error-main {
+    max-width: 100vw;
+    width: 100%;
+    margin: 64px 0 0 0;
+    border: 2px #202020 solid;
+    border-top: none;
+    padding: 56px 32px;
+    overflow-x: hidden;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .error-main {
+    max-width: 100vw;
+    width: 100%;
+    margin: 80px 0 0 0;
+    border: 2px solid #202020;
+    border-top: none;
+    padding: 120px 192px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .error-main {
+    min-height: none;
+  }
+}
+.error-main .error-main__title {
+  display: flex;
+  flex-direction: column;
+}
+.error-main .error-main__title .error-main__h1 {
+  font-family: "Inter", sans-serif;
+  font-size: 5rem;
+  line-height: 5rem;
+  letter-spacing: -0.2rem;
+  font-weight: 900;
+  margin-bottom: 24px;
+}
+@media screen and (max-width: 768px) {
+  .error-main .error-main__title .error-main__h1 {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  .error-main .error-main__title .error-main__h1 {
+    font-size: 3rem;
+    line-height: 3rem;
+    text-align: center;
+  }
+}
+.error-main .error-main__title .error-main__text {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  max-width: 28ch;
+  margin: 0 auto;
+}
+.error-main .button-primary {
+  border: none;
+  display: flex;
+  margin: 32px auto;
+}
+.error-main .button-primary a {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #F7FBFF;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  background-color: #202020;
+  padding: 16px 20px;
+  transition: all 400ms ease-in-out;
+}
+.error-main .button-primary a:hover {
+  background-color: #6977F9;
+}
+.error-main .error-main__img {
+  position: absolute;
+  left: 0;
+  top: 30vh;
+  height: 60vh;
+}
+@media screen and (max-width: 800px) {
+  .error-main .error-main__img {
+    position: relative;
+    height: auto;
+    top: 20px;
+    left: -80px;
+    width: 90vw;
+  }
+}
+@media screen and (max-width: 800px) {
+  .error-main .error-main__img {
+    position: relative;
+    height: auto;
+    top: 20px;
+    left: -40px;
+    width: 100vw;
+  }
+}
+.error-main .error-main__img img {
+  position: relative;
+  left: -60px;
+  top: 0;
+  z-index: -2;
+}
+@media screen and (max-width: 900px) {
+  .error-main .error-main__img img {
+    left: -100px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .error-main .error-main__img img {
+    left: 0px;
+  }
+}
+
+/* Solid colors - for backgrounds or buttons 👇 */
+/* Text colors - for text usage only 👇 */
+/* Fonts 👇 */
+/* Link hovers 👇 */
+/* Border all 👇 */
+/* --------------- End of variables --------------- */
+/* MIXINX ZONE 👇👇👇 */
+/*Mixin fonts start 👇*/
+/*Mixin fonts end 👆*/
+/*Mixin button start 👇*/
+/*Mixin button end */
+/* MIXINX ZONE 👆👆👆 */
 .footer {
   background-color: #000000;
   color: #F7FBFF;
