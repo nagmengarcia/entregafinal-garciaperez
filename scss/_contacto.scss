@@ -7,7 +7,7 @@
     height: 8px;
     background-color: none;
     position: relative;
-    left: -13.5px;
+    left: -14px;
     z-index: -1;
     transform: scale(1, 1);
     transition: all 400ms ease-in-out;
@@ -58,6 +58,11 @@
             justify-content: space-between;
             gap: 16px;
 
+            @media screen and (max-width:576px) {
+                flex-direction: column;
+                
+            }
+
             .form__cell-container {
                 width: 100%;
                 
@@ -75,6 +80,7 @@
                     border-bottom: $border-all;
                     padding: 8px;
                     font-family: $ibm-plex-mono;
+                    @include border-radius-none; 
                     &:focus{
                         @extend .form__cell;
                         border-color: $link-hovered-purpleblue;
@@ -122,7 +128,7 @@
                     display: inline-block;
                     background-color: $link-hovered-purpleblue;
                     position: relative;
-                    left: -13.5px;
+                    left: -14px;
                     transform: scale(1.2, 1.2);
                 }
             } 
@@ -185,9 +191,14 @@
     @include svg-container;
     max-width: 98vw;
     left: 2px;
-    bottom: -200px;
+    bottom: -460px;
     @media screen and (max-width:800px){
-        bottom: -100px;
+        bottom: -360px;
+        path {
+            transform: scale(.6);
+            stroke-width:calc(2px / .6) ;
+        }
+
     }
     @media screen and (max-width:576px){
         bottom: -80px;
@@ -211,68 +222,3 @@
         } 
     }
 }
-
-/*
-.svg-contacto-one {
-    position: absolute;
-    top: 120px;
-    right: -90px;
-    z-index: -1;
-    path {
-        stroke-width: 2px;
-    }
-    @media screen and (max-width:1000px) {
-        width: 280px;
-        path {
-            stroke-width: 2px;
-        }
-    }
-    @media screen and (max-width:800px) {
-        width: 160px;
-        top: 30px;
-        path {
-            stroke-width: 4px;
-        }
-    }
-    @media screen and (max-width:576px) {
-        width: 80px;
-        right: -40px;
-        top: -50px;
-        path {
-            stroke-width: 8px;
-        }
-    }
-}
-
-.svg-contacto-two{
-    position: absolute;
-    z-index: -1;
-    margin-top: -80px;
-    left: -120px;
-    @media screen and (max-width:1000px) {
-        width: 280px;
-       
-        path {
-            stroke-width: 2px;
-        }
-    }
-    @media screen and (max-width:800px) {
-        width: 160px;
-        margin-top: -100px;
-        left: -80px;
-        path {
-            stroke-width: 4px;
-        }
-    }
-    @media screen and (max-width:576px) {
-        width: 80px;
-        margin-top: -120px;
-        left: -30px;
-        
-        path {
-            stroke-width: 8px;
-        }
-    }
-}
-
-*/
