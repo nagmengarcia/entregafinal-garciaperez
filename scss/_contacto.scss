@@ -194,14 +194,10 @@
     bottom: -460px;
     @media screen and (max-width:800px){
         bottom: -360px;
-        path {
-            transform: scale(.6);
-            stroke-width:calc(2px / .6) ;
-        }
-
+        
     }
     @media screen and (max-width:576px){
-        bottom: -80px;
+        bottom: -340px;
     }
     .svg-contacto-two{
         position: relative;
@@ -214,7 +210,7 @@
             }  
         }
         @media screen and (max-width:576px) {
-            left: -140px;
+            left: -180px;
             transform: scale(.4);
             path {
                 stroke-width: calc(2px / .4)

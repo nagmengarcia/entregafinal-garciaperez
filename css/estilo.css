@@ -1208,14 +1208,10 @@
   .contacto-main__svg-container-two {
     bottom: -360px;
   }
-  .contacto-main__svg-container-two path {
-    transform: scale(0.6);
-    stroke-width: 3.3333333333px;
-  }
 }
 @media screen and (max-width: 576px) {
   .contacto-main__svg-container-two {
-    bottom: -80px;
+    bottom: -340px;
   }
 }
 .contacto-main__svg-container-two .svg-contacto-two {
@@ -1233,7 +1229,7 @@
 }
 @media screen and (max-width: 576px) {
   .contacto-main__svg-container-two .svg-contacto-two {
-    left: -140px;
+    left: -180px;
     transform: scale(0.4);
   }
   .contacto-main__svg-container-two .svg-contacto-two path {
