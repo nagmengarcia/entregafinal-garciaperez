@@ -1350,15 +1350,21 @@
   display: flex;
   align-content: center;
   justify-content: center;
+  align-items: center;
 }
 .footer__section-two a {
   text-decoration: none;
+  text-align: center;
 }
 .footer__section-two a p {
   font-size: 0.6rem;
   text-decoration: none;
   color: #F7FBFF;
   margin-top: 8px;
+  background-color: blue;
+}
+.footer__section-two svg {
+  background-color: red;
 }
 
 /* Solid colors - for backgrounds or buttons 👇 */
